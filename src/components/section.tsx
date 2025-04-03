@@ -7,7 +7,10 @@ export const Section = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <section
     ref={ref}
-    className={cn("px-[10px] py-[40px]", className)}
+    className={cn(
+      "lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px]  py-[80px]",
+      className
+    )}
     {...props}
   />
 ));

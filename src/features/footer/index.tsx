@@ -1,5 +1,7 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { motion } from "framer-motion";
 import { Globe, Mail, MapPin, Phone, Send } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -48,12 +50,52 @@ export function Footer() {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <footer className="w-full border-t-2 border-[#F2D6D7] bg-white">
-      <div className="py-16 px-8 ">
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-6">
-          <div className="space-y-1">
-            <div className="flex items-center lg:justify-center md:justify-center sm:justify-start">
+      <div className="py-16 px-8">
+        <motion.div
+          className="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          <motion.div variants={itemVariants} className="space-y-1">
+            <div className="flex items-start lg:justify-center md:justify-center sm:justify-start">
               <Image
                 src="/assets/logo.webp"
                 alt="AllForOne Logo"
@@ -62,38 +104,61 @@ export function Footer() {
                 className="h-28 w-28 object-fill"
               />
             </div>
-          </div>
+          </motion.div>
 
-          <div className="space-y-2 mt-2 text-sm text-gray-600">
-            <div className="flex items-start space-x-2">
+          <motion.div
+            variants={itemVariants}
+            className="space-y-2 mt-2 text-sm text-gray-600"
+          >
+            <motion.div
+              variants={textVariants}
+              className="flex items-start space-x-2"
+            >
               <MapPin className="h-5 w-5 text-blue-400" />
               <div>
                 <p>Antananarivo</p>
                 <p>Madagasikara</p>
               </div>
-            </div>
-            <div className="flex items-start space-x-2">
+            </motion.div>
+            <motion.div
+              variants={textVariants}
+              className="flex items-start space-x-2"
+            >
               <Phone className="h-5 w-5 text-blue-400" />
               <div>
                 <p>(+261) 38 38 774 07</p>
                 <p>(+261) 34 52 103 85</p>
               </div>
-            </div>
-            <div className="flex items-start space-x-2">
+            </motion.div>
+            <motion.div
+              variants={textVariants}
+              className="flex items-start space-x-2"
+            >
               <Mail className="h-5 w-5 text-blue-400" />
               <p>contact@allforone.com</p>
-            </div>
-            <div className="flex items-start space-x-2">
+            </motion.div>
+            <motion.div
+              variants={textVariants}
+              className="flex items-start space-x-2"
+            >
               <Globe className="h-5 w-5 text-blue-400" />
               <p>www.allforone.mg</p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="space-y-1">
-            <h3 className="text-md font-semibold text-[#023759]">{`Besoins de plus d'informations ?`}</h3>
-            <p className="text-sm text-[#396CAA]">
+          <motion.div variants={itemVariants} className="space-y-1">
+            <motion.h3
+              variants={textVariants}
+              className="text-md font-semibold text-[#023759]"
+            >
+              {`Besoins de plus d'informations ?`}
+            </motion.h3>
+            <motion.p
+              variants={textVariants}
+              className="text-sm text-[#396CAA]"
+            >
               Nous sommes à votre écoute.
-            </p>
+            </motion.p>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <Link
@@ -111,48 +176,67 @@ export function Footer() {
                 </Link>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="space-y-2">
-            <h3 className="text-md font-semibold text-[#023759]">
+          <motion.div variants={itemVariants} className="space-y-2">
+            <motion.h3
+              variants={textVariants}
+              className="text-md font-semibold text-[#023759]"
+            >
               Liens Rapides
-            </h3>
+            </motion.h3>
             <ul className="space-y-2 text-sm text-gray-600">
               {quickLinks.map((link) => (
-                <li key={link} className="flex items-center space-x-2">
+                <motion.li
+                  key={link}
+                  variants={textVariants}
+                  className="flex items-center space-x-2"
+                >
                   <span className="text-[#396CAA]">•</span>
                   <Link href="#" className="text-[#396CAA] hover:text-blue-500">
                     {link}
                   </Link>
-                </li>
+                </motion.li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="space-y-2">
-            <h3 className="text-md font-semibold text-[#023759]">
+          <motion.div variants={itemVariants} className="space-y-2">
+            <motion.h3
+              variants={textVariants}
+              className="text-md font-semibold text-[#023759]"
+            >
               Nos Services
-            </h3>
+            </motion.h3>
             <ul className="space-y-2 text-sm text-gray-600">
               {services.map((service) => (
-                <li key={service} className="flex items-center space-x-2">
+                <motion.li
+                  key={service}
+                  variants={textVariants}
+                  className="flex items-center space-x-2"
+                >
                   <span className="text-[#396CAA]">•</span>
                   <Link href="#" className="text-[#396CAA] hover:text-blue-500">
                     {service}
                   </Link>
-                </li>
+                </motion.li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="space-y-2">
-            <h3 className="text-md font-semibold text-[#023759]">Newsletter</h3>
-            <div className="space-y-2">
+          <motion.div variants={itemVariants} className="space-y-2">
+            <motion.h3
+              variants={textVariants}
+              className="text-md font-semibold text-[#023759]"
+            >
+              Newsletter
+            </motion.h3>
+            <motion.div variants={textVariants} className="space-y-2">
               <p className="text-sm text-[#396CAA]">Restez informé</p>
               <p className="text-sm text-[#396CAA]">
                 de nos dernières actualités
               </p>
-            </div>
+            </motion.div>
             <div className="flex max-w-md">
               <Input
                 type="email"
@@ -166,23 +250,29 @@ export function Footer() {
                 <Send className="h-5 w-5 text-white" />
               </Button>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
-      <div className="border-t border-gray-200 rounded-tl-3xl rounded-tr-3xl bg-[#E6F3FF] py-4">
-        <div className="container px-8">
-          <div className="flex flex-col items-center space-y-2 text-sm text-gray-600 md:flex-row md:space-y-0">
-            <div>
+      <motion.div
+        className="w-full border-t border-gray-200 rounded-tl-3xl rounded-tr-3xl bg-[#E6F3FF] py-4 px-16"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <div className="">
+          <div className="flex flex-col items-center justify-between space-y-2 text-sm text-gray-600 md:flex-row md:space-y-0">
+            <motion.div variants={textVariants}>
               <p>www.allforone.mg</p>
               <p>Crée et développé par Allforone</p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div variants={textVariants}>
               <p>©Allforone 2025 - Tous droits réservés</p>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 }
