@@ -6,6 +6,7 @@ import QueryProvider from "@/provider/queryProvider";
 import { Suspense } from "react";
 import "./globals.css";
 import Loading from "./loading";
+import Header from "@/features/header/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
           <QueryProvider>
             <Suspense fallback={<Loading />}>
               <div className="max-sm:overflow-x-hidden overflow-y-visible">
+                <Header />
                 {children}
               </div>
             </Suspense>
