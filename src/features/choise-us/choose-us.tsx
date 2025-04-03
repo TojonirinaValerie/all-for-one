@@ -2,13 +2,13 @@ import ChooseUsItem from "@/components/choos-us/choose-us-item";
 import { Section } from "@/components/section";
 import { Handshake, HeartHandshake, Lightbulb, Puzzle } from "lucide-react";
 
-export type ChooseUstype = {
+export type DataSectionType = {
   title: string;
   icon: React.ElementType<any, any>;
   description: string;
 };
 
-const chooseUsData: ChooseUstype[] = [
+const chooseUsData: DataSectionType[] = [
   {
     title: "Votre Projet, Notre Passion",
     icon: <Handshake color="white" size={38} strokeWidth={1.25} />,

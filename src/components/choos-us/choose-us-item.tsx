@@ -1,6 +1,6 @@
-import { ChooseUstype } from "@/features/choise-us/choose-us";
+import { DataSectionType } from "@/features/choise-us/choose-us";
 
-const ChooseUsItem: React.FC<{ data: ChooseUstype }> = ({ data }) => {
+const ChooseUsItem: React.FC<{ data: DataSectionType }> = ({ data }) => {
   const { title, icon, description } = data;
   return (
     <div className="w-full p-10 py-12 bg-white rounded-[40px] border-[010F19]/5 transition 

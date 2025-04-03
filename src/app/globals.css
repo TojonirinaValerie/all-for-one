@@ -39,6 +39,8 @@
   --color-card: var(--card);
   --color-blue-icon-bg: var(--blue-icon-bg);
   --color-shadow: var(--shadow)
+  --color-whitealt: var(--whitealt);
+  --color-blue-sky: var(--blue-sky);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -88,6 +90,8 @@
   --sidebar-ring: oklch(0.707 0.022 261.325);
   --blue-icon-bg: #046daf;
   --shadow: #A2B6C3;
+  --whitealt: #F5FBFF;
+  --blue-sky: #E6F5FE;
 }
 
 .dark {
@@ -124,6 +128,8 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
   --blue-icon-bg: #046daf;
   --shadow: #A2B6C3;
+  --whitealt: #F5FBFF;
+  --blue-sky: #E6F5FE;
 }
 
 @layer base {
