@@ -37,7 +37,7 @@ const chooseUsData: ChooseUstype[] = [
 
 const ChooseUs = () => {
   return (
-    <Section className="flex flex-col items-center text bg-primary/4 h-screen gap-6">
+    <Section className="flex flex-col items-center text bg-primary/4 min-h-screen gap-6">
       <div className="flex flex-col items-center max-w-[1500px]">
         <h2 className="text-foreground/50 tracking-widest">WHY CHOOSE US ?</h2>
         <h1 className="text-xxl font-[800]">
@@ -48,7 +48,8 @@ const ChooseUs = () => {
           feugiat pretium velit ac scelerisque. <br />
           In vitae ligula eget ligula pulvinar rutrum convallis id.{" "}
         </p>
-        <div className="grid grid-cols-2 gap-16 mt-10 ">
+        <div className="grid grid-cols-2 gap-16 mt-10 
+        max-2xl:gap-10">
           {chooseUsData.map((item, index) => (
             <ChooseUsItem key={`${item.title}-${index}`} data={item} />
           ))}
