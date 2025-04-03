@@ -37,10 +37,10 @@ const chooseUsData: DataSectionType[] = [
 
 const ChooseUs = () => {
   return (
-    <Section className="flex flex-col items-center text bg-primary/4 min-h-screen gap-6">
+    <Section className="max-sm:px-8 max-md:px-12 max-lg:px-12 max-xl:12 flex flex-col items-center text bg-primary/4 min-h-screen gap-6">
       <div className="flex flex-col items-center max-w-[1500px]">
         <h2 className="text-foreground/50 tracking-widest">WHY CHOOSE US ?</h2>
-        <h1 className="text-xxl font-[800]">
+        <h1 className="text-xxl font-[800] text-center">
           Pourquoi nous <span className="text-accent">choisir</span> ?
         </h1>
         <p className="text-foreground/50 text-center mt-2">
@@ -49,7 +49,8 @@ const ChooseUs = () => {
           In vitae ligula eget ligula pulvinar rutrum convallis id.{" "}
         </p>
         <div className="grid grid-cols-2 gap-16 mt-10 
-        max-2xl:gap-10">
+        max-2xl:gap-10
+        max-md:grid-cols-1">
           {chooseUsData.map((item, index) => (
             <ChooseUsItem key={`${item.title}-${index}`} data={item} />
           ))}
