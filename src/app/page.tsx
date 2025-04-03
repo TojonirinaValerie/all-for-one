@@ -7,7 +7,6 @@ import Workflow from "@/features/workflow/woorkflow";
 export default function Home() {
   return (
     <main>
-      <Header />
       <ChooseUs />
       <div className="relative w-full">
         <img
