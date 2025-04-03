@@ -17,9 +17,9 @@ const ProjectsItem: React.FC<{ data: ProjectDataType }> = ({ data }) => {
         transition={{ duration: 0.3 }}
         className="absolute p-10 z-50 bg-gradient-to-b from-[#00000000] to-[#000000] h-full flex flex-col justify-end w-full"
       >
-        <div className="flex flex-row justify-between w-full">
-          <h1 className="text-xl text-project-card-foreground">{title}</h1>
-          <p className="text-lg text-project-card-foreground">
+        <div className="flex flex-row justify-between items-center w-full">
+          <h1 className="text-xl max-2xl:text-lg text-project-card-foreground">{title}</h1>
+          <p className="text-lg max-2xl:text-base text-project-card-foreground">
             Role: Dashboard
           </p>
         </div>
@@ -43,13 +43,13 @@ const ProjectsItem: React.FC<{ data: ProjectDataType }> = ({ data }) => {
           </div>
         </div>
         <div className="p-4">
-          <div className="flex flex-row justify-between w-full">
-            <h1 className="text-xl text-project-card-foreground">{title}</h1>
-            <p className="text-lg text-project-card-foreground">
+          <div className="flex flex-row justify-between items-center w-full">
+            <h1 className="text-xl  max-2xl:text-lg text-project-card-foreground">{title}</h1>
+            <p className="text-lg max-2xl:text-base text-project-card-foreground">
               Role: Dashboard
             </p>
           </div>
-          <p className="text-project-card-foreground leading-5 text-md font-[300]">
+          <p className="text-project-card-foreground leading-5 text-md  max-2xl:text-lg font-[300]">
             Un logiciel equipé d’un dispositif électronique permettant de suivre
             en temps réel les déplacements des agents (coursiers, livreurs, etc)
             d’une entreprise.

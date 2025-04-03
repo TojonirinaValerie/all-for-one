@@ -33,7 +33,7 @@ const Projects = () => {
     <Section className="flex flex-col items-center text bg-primary/4 min-h-screen gap-6">
       <div className="flex flex-col items-center w-full max-w-[1500px]">
         <h2 className="text-foreground/50 tracking-widest">WHY CHOOSE US ?</h2>
-        <h1 className="text-xxl font-[800]">
+        <h1 className="text-xxl font-[800] text-center">
           Pourquoi nous <span className="text-accent">choisir</span> ?
         </h1>
         <p className="text-foreground/50 text-center mt-2">
@@ -43,7 +43,10 @@ const Projects = () => {
         </p>
         <div
           className="w-full grid grid-cols-2 gap-8 mt-10
-            max-2xl:gap-10"
+            max-2xl:gap-10
+            max-lg:gap-6
+            max-md:grid-cols-1
+            "
         >
           {ProjectsData.map((item, index) => (
             <ProjectsItem key={`${index}-${item.title}`} data={item} />

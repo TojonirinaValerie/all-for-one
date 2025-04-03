@@ -36,8 +36,9 @@ const Workflow = () => {
   const isInView2 = useInView(ref2, { once: true });
 
   return (
-    <Section className="px-0 bg-white">
-      <section className="px-[150px] h-[max-content] flex flex-row items-center bg-[#F5F7F9] my-[250px]">
+    <Section className="lg:px-0 px-0 sm:px-0 md:px-0 bg-white">
+      <div className="lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px] h-[max-content] flex flex-row items-center bg-[#F5F7F9] my-[250px]
+      max-lg:flex-col max-lg:mb-0 max-lg:pb-0">
         <motion.div
           ref={ref2}
           initial={{ y: 100, opacity: 0 }}
@@ -45,11 +46,11 @@ const Workflow = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="flex flex-col flex-1 max-w-[561px] py-32 z-[90]"
         >
-          <h2 className="text-foreground/50 tracking-widest">OUR WORKFLOW</h2>
-          <h1 className="text-xxl font-[800]">
+          <h2 className="text-foreground/50 tracking-widest max-lg:text-center">OUR WORKFLOW</h2>
+          <h1 className="text-xxl font-[800] max-lg:text-center">
             Notre flux de <span className="text-accent">travail</span> ?
           </h1>
-          <p className="text-foreground/50 mt-2">
+          <p className="text-foreground/50 mt-2  max-lg:text-center">
             Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
             feugiat pretium velit ac scelerisque. In vitae ligula eget ligula
             pulvinar rutrum convallis id.
@@ -60,9 +61,9 @@ const Workflow = () => {
           initial={{ x: 100, opacity: 0 }}
           animate={isInView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="relative flex-1"
+          className="lg:relative flex-1"
         >
-          <div className="flex flex-col items-end justify-center gap-16 absolute right-0 top-[-330px]">
+          <div className="flex flex-col items-end justify-center gap-16 lg:absolute right-0 top-[-330px] max-lg:pb-16">
             {workflowData.map((item, index) => (
               <WorkflowItem
                 data={item}
@@ -72,7 +73,7 @@ const Workflow = () => {
             ))}
           </div>
         </motion.div>
-      </section>
+      </div>
     </Section>
   );
 };

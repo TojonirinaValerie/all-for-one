@@ -9,7 +9,7 @@ export default function Home() {
     <main>
       <Header />
       <ChooseUs />
-      <div className="relative w-full border">
+      <div className="relative w-full">
         <img
           src="http://localhost:3000/assets/bg_workflow.png"
           className="w-full h-full absolute object-cover right-0"
