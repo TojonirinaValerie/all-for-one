@@ -1,9 +1,5 @@
-import Header from "@/features/header/header";
+import HomePage from "./(home)/home/page";
 
 export default function Home() {
-  return (
-    <main>
-      <Header/>
-    </main>
-  );
+  return <HomePage />;
 }
