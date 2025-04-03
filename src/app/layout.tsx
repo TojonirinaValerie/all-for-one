@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import { ThemeProvider } from "@/components/themeProvider";
+import { Footer } from "@/features/footer";
 import QueryProvider from "@/provider/queryProvider";
 import { Suspense } from "react";
 import "./globals.css";
@@ -43,6 +44,7 @@ export default function RootLayout({
               <div className="max-sm:overflow-x-hidden overflow-y-visible">
                 {children}
               </div>
+              <Footer />
             </Suspense>
           </QueryProvider>
         </ThemeProvider>
