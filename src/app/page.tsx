@@ -7,10 +7,17 @@ import Workflow from "@/features/workflow/woorkflow";
 export default function Home() {
   return (
     <main>
-      <Header/>
+      <Header />
       <ChooseUs />
-      <Workflow />
-      <Deliverables />
+      <div className="relative w-full border">
+        <img
+          src="http://localhost:3000/assets/bg_workflow.png"
+          className="w-full h-full absolute object-cover right-0"
+          alt=""
+        />
+        <Workflow />
+        <Deliverables />
+      </div>
       <Projects />
     </main>
   );

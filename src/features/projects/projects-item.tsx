@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ProjectDataType } from "./projects";
 import { ArrowRight } from "lucide-react";
@@ -6,18 +9,29 @@ const ProjectsItem: React.FC<{ data: ProjectDataType }> = ({ data }) => {
   const { title, description, image } = data;
   return (
     <article className="w-full rounded-[40px] aspect-[791/618] relative flex flex-col justify-end overflow-hidden">
-      <img src={image} alt="" className="absolute w-full h-full object-cover" />
-
-      <div className="hidden p-10 z-50 bg-gradient-to-b from-[#00000000] to-[#000000] h-full flex flex-col justify-end">
+      <img src={image} alt="" className="absolute w-full object-cover" />
+      <motion.div
+        initial={{ opacity: 1, y: 10 }}
+        animate={{ opacity: 1, y:0 }}
+        whileHover={{ opacity: 0, y: -5 }}
+        transition={{ duration: 0.3 }}
+        className="absolute p-10 z-50 bg-gradient-to-b from-[#00000000] to-[#000000] h-full flex flex-col justify-end w-full"
+      >
         <div className="flex flex-row justify-between w-full">
           <h1 className="text-xl text-project-card-foreground">{title}</h1>
           <p className="text-lg text-project-card-foreground">
             Role: Dashboard
           </p>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="p-6 z-50 bg-gradient-to-b from-[#00000000] to-[#000000] h-full flex flex-col justify-between">
+      <motion.div
+        initial={{ opacity: 0, y: -5 }}
+        animate={{ opacity: 0 }}
+        whileHover={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        className="absolute p-6 z-50 bg-gradient-to-b from-[#00000000] to-[#000000] h-full flex flex-col justify-between"
+      >
         <div className="flex flex-row justify-end">
           <Button className="bg-[#D94336] text-[#ECF0F3] text-lg p-6">
             2024
@@ -41,7 +55,7 @@ const ProjectsItem: React.FC<{ data: ProjectDataType }> = ({ data }) => {
             d’une entreprise.
           </p>
         </div>
-      </div>
+      </motion.div>
     </article>
   );
 };

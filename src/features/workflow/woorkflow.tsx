@@ -36,14 +36,14 @@ const Workflow = () => {
   const isInView2 = useInView(ref2, { once: true });
 
   return (
-    <Section className="px-0 min-h-screen bg-white">
+    <Section className="px-0 bg-white">
       <section className="px-[150px] h-[max-content] flex flex-row items-center bg-[#F5F7F9] my-[250px]">
         <motion.div
           ref={ref2}
           initial={{ y: 100, opacity: 0 }}
           animate={isInView2 ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="flex flex-col flex-1 max-w-[561px] py-32"
+          className="flex flex-col flex-1 max-w-[561px] py-32 z-[90]"
         >
           <h2 className="text-foreground/50 tracking-widest">OUR WORKFLOW</h2>
           <h1 className="text-xxl font-[800]">
