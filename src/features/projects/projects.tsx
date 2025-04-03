@@ -1,5 +1,9 @@
+"use client";
+
 import { Section } from "@/components/section";
 import ProjectsItem from "./projects-item";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export type ProjectDataType = {
   title: string;
@@ -52,6 +56,16 @@ const Projects = () => {
             <ProjectsItem key={`${index}-${item.title}`} data={item} />
           ))}
         </div>
+        <Button className="mt-8 border cursor-pointer border-primary hover:bg-[#dce4ef66] text-primary bg-[#dce4ef66] rounded-4xl h-16 w-80">
+          <motion.div
+            className="flex items-center gap-2"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            Voir plus
+          </motion.div>
+        </Button>
       </div>
     </Section>
   );
