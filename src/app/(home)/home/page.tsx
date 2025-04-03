@@ -4,6 +4,8 @@ import { Hero } from "@/features/hero/hero";
 import { Area } from "@/features/other-area/area";
 import Projects from "@/features/projects/projects";
 import Workflow from "@/features/workflow/woorkflow";
+import ServicesSection from "@/features/service";
+import TestimonialSection from "@/features/testimoniales";
 import { Fragment } from "react";
 
 function HomePage() {
@@ -11,6 +13,7 @@ function HomePage() {
     <Fragment>
       <Hero />
       <ChooseUs />
+      <ServicesSection />
       <Area />
       <div className="relative w-full">
         <img
@@ -22,6 +25,7 @@ function HomePage() {
         <Deliverables />
       </div>
       <Projects />
+      <TestimonialSection />
     </Fragment>
   );
 }

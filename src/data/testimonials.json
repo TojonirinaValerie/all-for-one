@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "comment": "L'équipe a transformé notre idée en une application performante et intuitive. Leur expertise en développement web est impressionnante !",
+    "commentator": "Sophie Martin",
+    "job": "Fondatrice de TechStartup",
+    "stars": 5,
+    "images": [
+      {
+        "url": "https://example.com/images/sophie-martin.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "comment": "Un service client exceptionnel et un produit livré dans les délais. Notre site e-commerce a gagné en vitesse et en fiabilité grâce à eux.",
+    "commentator": "Lucas Dupont",
+    "job": "Directeur Marketing chez ShopOnline",
+    "stars": 4,
+    "images": [
+      {
+        "url": "https://example.com/images/lucas-dupont.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "comment": "Leur maîtrise des technologies modernes comme React et Node.js nous a permis de lancer notre plateforme en un temps record.",
+    "commentator": "Emma Lefèvre",
+    "job": "CTO de InnovateCorp",
+    "stars": 5,
+    "images": [
+      {
+        "url": "https://example.com/images/emma-lefevre.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "comment": "Une collaboration fluide et des solutions sur mesure. Notre application mobile est maintenant un atout majeur pour notre business.",
+    "commentator": "Thomas Bernard",
+    "job": "PDG de MobileFirst",
+    "stars": 4,
+    "images": [
+      {
+        "url": "https://example.com/images/thomas-bernard.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "comment": "Des développeurs talentueux qui comprennent vraiment les besoins de leurs clients. Je recommande vivement leurs services !",
+    "commentator": "Clara Dubois",
+    "job": "Responsable IT chez DataSolutions",
+    "stars": 5,
+    "images": [
+      {
+        "url": "https://example.com/images/clara-dubois.jpg"
+      }
+    ]
+  }
+]

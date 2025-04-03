@@ -8,7 +8,7 @@ export const Section = React.forwardRef<
   <section
     ref={ref}
     className={cn(
-      "lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px] py-[80px]",
+      "lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px]  py-[80px]",
       className
     )}
     {...props}
