@@ -1,0 +1,57 @@
+import { Section } from "@/components/section";
+import ProjectsItem from "./projects-item";
+
+export type ProjectDataType = {
+  title: string;
+  description: string;
+  image: string;
+};
+const ProjectsData: ProjectDataType[] = [
+  {
+    title: "All Tracks",
+    description: "",
+    image: "http://localhost:3000/assets/project1.png",
+  },
+  {
+    title: "All Tracks",
+    description: "",
+    image: "http://localhost:3000/assets/project2.png",
+  },
+  {
+    title: "All Tracks",
+    description: "",
+    image: "http://localhost:3000/assets/project3.png",
+  },
+  {
+    title: "All Tracks",
+    description: "",
+    image: "http://localhost:3000/assets/project4.png",
+  },
+];
+const Projects = () => {
+  return (
+    <Section className="flex flex-col items-center text bg-primary/4 min-h-screen gap-6">
+      <div className="flex flex-col items-center w-full max-w-[1500px]">
+        <h2 className="text-foreground/50 tracking-widest">WHY CHOOSE US ?</h2>
+        <h1 className="text-xxl font-[800]">
+          Pourquoi nous <span className="text-accent">choisir</span> ?
+        </h1>
+        <p className="text-foreground/50 text-center mt-2">
+          Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
+          feugiat pretium velit ac scelerisque. <br />
+          In vitae ligula eget ligula pulvinar rutrum convallis id.{" "}
+        </p>
+        <div
+          className="w-full grid grid-cols-2 gap-8 mt-10
+            max-2xl:gap-10"
+        >
+          {ProjectsData.map((item, index) => (
+            <ProjectsItem key={`${index}-${item.title}`} data={item} />
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
+};
+
+export default Projects;

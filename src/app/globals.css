@@ -41,6 +41,7 @@
   --color-shadow: var(--shadow)
   --color-whitealt: var(--whitealt);
   --color-blue-sky: var(--blue-sky);
+  --color-project-card-foreground: var(--project-card-foreground);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -92,6 +93,7 @@
   --shadow: #A2B6C3;
   --whitealt: #F5FBFF;
   --blue-sky: #E6F5FE;
+  --project-card-foreground: #ECF0F3;
 }
 
 .dark {
@@ -130,6 +132,7 @@
   --shadow: #A2B6C3;
   --whitealt: #F5FBFF;
   --blue-sky: #E6F5FE;
+  --project-card-foreground: #ECF0F3;
 }
 
 @layer base {
