@@ -26,8 +26,8 @@ const workflowData: DataSectionType[] = [
 
 const Deliverables = () => {
   return (
-    <Section className="px-0 bg-white pb-[400px]">
-      <section className="px-[150px] h-[max-content] flex flex-row items-center bg-[#F5F7F9] w-full">
+    <Section className="lg:px-0 px-0 sm:px-0 md:px-0 py-[80px] max-lg:px-0 bg-white pb-[400px]">
+      <div className="lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px] py-[80px] h-[max-content] flex flex-row items-center bg-[#F5F7F9] my-[250px] max-md:flex-col">
         <div className="relative flex-1">
           <div className="flex flex-col items-end justify-center gap-16 absolute left-0 top-[-330px]">
             {workflowData.map((item, index) => (
@@ -39,7 +39,7 @@ const Deliverables = () => {
             ))}
           </div>
         </div>
-        <div className="flex flex-col flex-1 max-w-[610px] max-2xl:max-w-[461px] py-32">
+        <div className="flex flex-col flex-1 max-w-[561px] max-xl:max-w-[400px] py-32">
           <h2 className="text-foreground/50 tracking-widest">
             WE OFFER YOU DELIVERABLES
           </h2>
@@ -53,7 +53,7 @@ const Deliverables = () => {
             pulvinar rutrum convallis id.
           </p>
         </div>
-      </section>
+      </div>
     </Section>
   );
 };
