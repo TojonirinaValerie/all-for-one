@@ -44,8 +44,8 @@ const chooseUsData: DataSectionType[] = [
 
 const ChooseUs = () => {
   return (
-    <Section className="max-sm:px-8 max-md:px-12 max-lg:px-12 max-xl:12 flex flex-col items-center text bg-primary/4  gap-6">
-      <div className="flex flex-col items-center max-w-[1500px]">
+    <Section className="flex flex-col items-center text bg-primary/4 gap-6">
+      <div className="flex flex-col items-center max-w-7xl mx-auto">
         <SectionTitle>
           <SectionTitleEng>WHY CHOOSE US ?</SectionTitleEng>
           <SectionTitleTitle>
