@@ -3,13 +3,13 @@
 import { Section } from "@/components/section";
 import ProjectsItem from "./projects-item";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import SectionTitle, {
   SectionTitleAccent,
   SectionTitleDescription,
   SectionTitleEng,
   SectionTitleTitle,
 } from "@/components/section-title";
+import { ArrowRight } from "lucide-react";
 
 export type ProjectDataType = {
   title: string;
@@ -45,8 +45,7 @@ const Projects = () => {
         <SectionTitle>
           <SectionTitleEng>OUR PROJECT</SectionTitleEng>
           <SectionTitleTitle>
-            Nos{" "}
-            <SectionTitleAccent>Projets </SectionTitleAccent>
+            Nos <SectionTitleAccent>Projets </SectionTitleAccent>
           </SectionTitleTitle>
           <SectionTitleDescription>
             Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
@@ -65,15 +64,11 @@ const Projects = () => {
             <ProjectsItem key={`${index}-${item.title}`} data={item} />
           ))}
         </div>
-        <Button className="mt-8 border cursor-pointer border-primary hover:bg-[#dce4ef66] text-primary bg-[#dce4ef66] rounded-4xl h-16 w-80">
-          <motion.div
-            className="flex items-center gap-2"
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-          >
-            Voir plus
-          </motion.div>
+        <Button className="border border-primary hover:bg-[#dce4ef66] text-primary bg-[#dce4ef66] rounded-4xl h-16 w-80 not-2xl:h-12 not-lg:w-80 group relative flex items-center justify-center xl:mx-auto">
+          <div className="text-center">Obtenir un Devis</div>
+          <div className="w-0 opacity-0 group-hover:block group-hover:w-8 group-hover:opacity-100 transition-all duration-700 transform group-hover:translate-x-2 ease-in-out">
+            <ArrowRight className="h-14 w-14" />
+          </div>
         </Button>
       </div>
     </Section>
