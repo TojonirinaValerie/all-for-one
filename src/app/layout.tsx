@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import { ThemeProvider } from "@/components/themeProvider";
+import { Footer } from "@/features/footer";
 import QueryProvider from "@/provider/queryProvider";
 import { Suspense } from "react";
 import "./globals.css";
@@ -31,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased text-base`}
+        className={`${geistSans.variable} ${geistMono.variable} font-nexa antialiased text-base not-italic`}
       >
         <ThemeProvider
           attribute="class"
@@ -45,6 +46,7 @@ export default function RootLayout({
                 <Header />
                 {children}
               </div>
+              <Footer />
             </Suspense>
           </QueryProvider>
         </ThemeProvider>

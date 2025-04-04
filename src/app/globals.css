@@ -1,5 +1,136 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-Regular.ttf') format('truetype');
+  font-weight: 350;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-Black.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-RegularItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-BookItalic.ttf') format('truetype');
+  font-weight: 450;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/nexa/Nexa-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+} */
+
+
+body{
+  user-select: none;
+}
+
+.background-workflow{
+  background-position-y: -1500px;
+}
+
+.project-item{
+  background-image: linear-gradient(to bottom, #00000000 0%, #000000 70%, #000000 100%);
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -7,6 +138,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
+  --font-nexa:  "Nexa", sans-serif;
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -37,6 +169,11 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-blue-icon-bg: var(--blue-icon-bg);
+  --color-shadow: var(--shadow)
+  --color-whitealt: var(--whitealt);
+  --color-blue-sky: var(--blue-sky);
+  --color-project-card-foreground: var(--project-card-foreground);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -47,25 +184,27 @@
   --text-xs: 14px;
   --text-lg: 24px;
   --text-xl: 34px;
-  --text--xxl: 36px;
+  --text-xxl: 36px;
   --text-xxxl: 48px;
 }
 
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.13 0.028 261.692);
+  --foreground: #203046;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.13 0.028 261.692);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.13 0.028 261.692);
-  --primary: #02385A;
+  --primary: #02385a;
+  --tertiary: #314968;
+
   --primary-foreground: oklch(0.985 0.002 247.839);
-  --secondary:  #FBFBFB;
+  --secondary: #fbfbfb;
   --secondary-foreground: oklch(0.21 0.034 264.665);
   --muted: oklch(0.967 0.003 264.542);
   --muted-foreground: oklch(0.551 0.027 264.364);
-  --accent: #D94336;
+  --accent: #d94336;
   --accent-foreground: oklch(0.21 0.034 264.665);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.928 0.006 264.531);
@@ -84,6 +223,11 @@
   --sidebar-accent-foreground: oklch(0.21 0.034 264.665);
   --sidebar-border: oklch(0.928 0.006 264.531);
   --sidebar-ring: oklch(0.707 0.022 261.325);
+  --blue-icon-bg: #046daf;
+  --shadow: #A2B6C3;
+  --whitealt: #F5FBFF;
+  --blue-sky: #E6F5FE;
+  --project-card-foreground: #ECF0F3;
 }
 
 .dark {
@@ -93,13 +237,14 @@
   --card-foreground: oklch(0.985 0.002 247.839);
   --popover: oklch(0.21 0.034 264.665);
   --popover-foreground: oklch(0.985 0.002 247.839);
-  --primary: #02385A;
+  --primary: #02385a;
+  --tertiary: #314968;
   --primary-foreground: oklch(0.21 0.034 264.665);
-  --secondary: #FBFBFB;
+  --secondary: #fbfbfb;
   --secondary-foreground: oklch(0.985 0.002 247.839);
   --muted: oklch(0.278 0.033 256.848);
   --muted-foreground: oklch(0.707 0.022 261.325);
-  --accent: #D94336;
+  --accent: #d94336;
   --accent-foreground: oklch(0.985 0.002 247.839);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
@@ -118,6 +263,11 @@
   --sidebar-accent-foreground: oklch(0.985 0.002 247.839);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  --blue-icon-bg: #046daf;
+  --shadow: #A2B6C3;
+  --whitealt: #F5FBFF;
+  --blue-sky: #E6F5FE;
+  --project-card-foreground: #ECF0F3;
 }
 
 @layer base {
@@ -127,4 +277,12 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.leaflet-container {
+  z-index: 0 !important;
+}
+
+html {
+  scroll-behavior: smooth;
 }
