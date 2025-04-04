@@ -6,8 +6,10 @@ import { Area } from "@/features/other-area/area";
 import Projects from "@/features/projects/projects";
 import Workflow from "@/features/workflow/woorkflow";
 import ServicesSection from "@/features/service";
+import TechnologiaSection from "@/features/technologie";
 import TestimonialSection from "@/features/testimoniales";
 import { Fragment } from "react";
+import Image from "next/image";
 
 function HomePage() {
   return (
@@ -16,16 +18,18 @@ function HomePage() {
       <ChooseUs />
       <ServicesSection />
       <Area />
-      <div className="relative w-full">
-        <img
-          src="http://localhost:3000/assets/bg_workflow.png"
+      <div className="w-full bg-[url(/assets/bg_workflow.png)] url(/assets/techno/bg-techno.webp)] bg-no-repeat bg-cover bg-fixed">
+        {/* <Image
+          src="/assets/bg_workflow.png"
           className="w-full h-full absolute object-cover right-0"
           alt=""
-        />
+          width={"100"}
+        /> */}
         <Workflow />
         <Deliverables />
       </div>
       <Projects />
+      <TechnologiaSection />
       <TestimonialSection />
       <Contact />
     </Fragment>
