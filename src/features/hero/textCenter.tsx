@@ -29,7 +29,7 @@ export function TextCenter() {
       <span className="font-light not-2xl:text-sm">
         Nous vous donnons la technologie nécessaire pour améliorer la
         productivité,
-        <br /> la sécurité, et l'excellence opérationnelle globale dans votre
+        <br /> la sécurité, et l&apos;excellence opérationnelle globale dans votre
         projet.
       </span>
       <div className="flex not-xl:flex-col flex-wrap justify-center content-center gap-3 mx-auto mt-14 ">

@@ -10,7 +10,6 @@ interface IconCompoProps {
 
 export function IconCompo({
   src,
-  onClick,
   hoverSrc,
 }: Readonly<IconCompoProps>) {
   const [iconSrc, setIconSrc] = useState<string>(src);

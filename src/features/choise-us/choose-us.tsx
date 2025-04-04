@@ -6,6 +6,7 @@ import ChooseUsItem from "./choose-us-item";
 
 export type DataSectionType = {
   title: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   icon: React.ElementType<any, any>;
   description: string;
 };
