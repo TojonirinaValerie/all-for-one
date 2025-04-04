@@ -14,7 +14,6 @@ export default function TextContact() {
           exercitationem architecto nihil.
         </span>
       </div>
-
       <div className="bg-[#D8ECFC] rounded-tl-4xl h-52 w-72"></div>
     </div>
   );
