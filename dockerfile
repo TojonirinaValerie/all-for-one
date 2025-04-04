@@ -4,7 +4,7 @@ RUN apk add --no-cache libc6-compat
 
 WORKDIR /base 
 
-COPY package.json yarn.lock ./
+COPY package.json bun.lockb ./
 
 RUN yarn
 
@@ -17,7 +17,7 @@ WORKDIR /build
 COPY --from=base /base/node_modules ./node_modules
 COPY src ./src
 COPY public ./public
-COPY package.json yarn.lock ./
+COPY package.json bun.lockb ./
 
 RUN echo -e '/** @type {import("next").NextConfig} */\nconst nextConfig = {\n  output: "standalone",\n};\n\nexport default nextConfig;' > ./next.config.mjs
 
