@@ -15,12 +15,13 @@ const fadeInVariants = {
 
 export default function TechnologiaSection() {
   return (
-    <div className="bg-[url(/assets/techno/bg-techno.webp)] w-full h-[100%] sm:h-auto md:h-auto bg-no-repeat bg-cover bg-fixed">
+    <div className="bg-[url(/assets/techno/bg-techno.webp)] w-full h-[100%] sm:h-auto md:h-auto bg-no-repeat bg-cover bg-fixed" id="technologie">
       <motion.div
         className="w-full h-[100%] sm:h-auto md:h-auto"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
+       
       >
         <Section>
           <div className="max-w-7xl w-full mx-auto">
