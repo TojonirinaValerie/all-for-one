@@ -2,7 +2,7 @@
 
 import { Section } from "@/components/section";
 import { DataSectionType } from "../choise-us/choose-us";
-import { Handshake } from "lucide-react";
+import { DraftingCompass, Handshake, PackageCheck } from "lucide-react";
 import "./style.css";
 import WorkflowItem from "./workflow-item";
 import { motion, useInView } from "framer-motion";
@@ -25,13 +25,13 @@ const workflowData: DataSectionType[] = [
     title: "Conception UI & Developpement",
     description:
       "Le traitement et le développement du projet englobent toutes les étapes allant de la conception détaillée des solutions techniques jusqu'à la réalisation des développements",
-    icon: <Handshake color="#02385A" />,
+    icon: <DraftingCompass color="#02385A" />
   },
   {
     title: "Livraison et SAV",
     description:
       "Notre équipe est à votre écoute pour une installation rapide et un suivi personnalisé.",
-    icon: <Handshake color="#02385A" />,
+    icon: <PackageCheck color="#02385A" />,
   },
 ];
 const Workflow = () => {

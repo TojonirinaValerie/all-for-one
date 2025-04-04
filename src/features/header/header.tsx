@@ -29,7 +29,7 @@ export default function Header() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white absolute top-24 left-0 w-full shadow-lg z-50">
+        <div className="md:hidden bg-[#DCE4EF] absolute top-[60px] backdrop-blur-lg left-0 w-full shadow-lg z-50 ">
           <nav className="flex flex-col items-center gap-4 py-6">
             <MenuHeader title="Accueil" /> 
             <MenuHeader title="Services" />

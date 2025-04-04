@@ -325,7 +325,7 @@ export default function TestimonialSection() {
                 </SectionTitle>
               </div>
 
-              <div className="pb-6">
+              <div className="pb-6 max-md:hidden">
                 <Button
                   variant="outline"
                   className="rounded-full border-gray-300 cursor-pointer text-base flex px-6 py-5 items-center font-[300] bg-[#00000000] hover:bg-primary hover:text-white"
