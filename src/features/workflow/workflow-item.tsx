@@ -8,11 +8,12 @@ const WorkflowItem: React.FC<{
   const { title, description, icon } = data;
 
   return (
-    <article className={` ${withMargin ? " mr-10 " : " "} max-lg:mr-0 max-md:px-6`} >
+    <article
+      className={` ${withMargin ? " mr-10 " : " "} max-lg:mr-0 max-md:px-6`}
+    >
       <div
-        className={`flex flex-col justify-center px-14 py-8 relative max-w-[524px] min-h-[180px] rounded-[30px] max-xl:max-w-[400px] bg-primary ${
-          inverse ? " pr-18 " : " pl-18 "
-        }`}
+        className={`flex flex-col justify-center px-14 py-8 relative max-w-[524px] min-h-[180px] rounded-[30px] max-xl:max-w-[400px] bg-primary 
+          max-md:px-8 max-md:pl-12 max-md:py-4 ${inverse ? " pr-18 " : " pl-18 "}`}
       >
         <h2 className="text-[#F5FBFF] font-[600]">{title}</h2>
         <p className="text-[#F5FBFF] text-sm font-[300]">{description}</p>

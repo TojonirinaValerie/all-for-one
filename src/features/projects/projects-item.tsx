@@ -21,7 +21,8 @@ const ProjectsItem: React.FC<{ data: ProjectDataType }> = ({ data }) => {
         animate={{ opacity: 1, y: 0 }}
         whileHover={{ opacity: 0, y: -5 }}
         transition={{ duration: 0.3 }}
-        className="absolute p-10 z-50 bg-gradient-to-b from-[#00000000] to-[#000000] h-full flex flex-col justify-end w-full"
+        className="absolute p-10  z-50 bg-gradient-to-b from-[#00000000] to-[#000000] h-full flex flex-col justify-end w-full
+        max-md:p-4"
       >
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="text-xl max-2xl:text-lg text-project-card-foreground">
@@ -40,7 +41,6 @@ const ProjectsItem: React.FC<{ data: ProjectDataType }> = ({ data }) => {
         transition={{ duration: 0.3 }}
         className="absolute p-6 z-50  h-full flex flex-col justify-between project-item"
       >
-        {/* bg-gradient-to-b from-[#00000000] to-[#000000] */}
         <div className="flex flex-row justify-end">
           <p className="bg-[#D94336] text-[#ECF0F3] px-5 py-1 rounded-[10px]">
             2024
