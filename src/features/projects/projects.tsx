@@ -1,8 +1,6 @@
 "use client";
 
 import { Section } from "@/components/section";
-import ProjectsItem from "./projects-item";
-import { Button } from "@/components/ui/button";
 import SectionTitle, {
   SectionTitleAccent,
   SectionTitleDescription,
@@ -10,6 +8,7 @@ import SectionTitle, {
   SectionTitleTitle,
 } from "@/components/section-title";
 import { ArrowRight } from "lucide-react";
+import ProjectsItem from "./projects-item";
 
 export type ProjectDataType = {
   title: string;
@@ -64,12 +63,12 @@ const Projects = () => {
             <ProjectsItem key={`${index}-${item.title}`} data={item} />
           ))}
         </div>
-        <Button className="mt-6 border border-primary hover:bg-[#dce4ef66] text-primary bg-[#dce4ef66] rounded-4xl h-16 w-80 not-2xl:h-12 not-lg:w-80 group relative flex items-center justify-center xl:mx-auto">
+        <div className="mt-6 border border-primary hover:bg-[#dce4ef66] px-12 py-3 text-primary bg-[#dce4ef66] rounded-4xl not-2xl:h-12 not-lg:w-80 group relative flex items-center justify-center xl:mx-auto">
           <div className="text-center">Voir plus</div>
-          <div className="w-0 opacity-0 group-hover:block group-hover:w-8 group-hover:opacity-100 transition-all duration-700 transform group-hover:translate-x-2 ease-in-out">
-            <ArrowRight className="h-14 w-14" />
+          <div className="w-0 opacity-0 group-hover:block group-hover:w-12 group-hover:opacity-100 transition-all duration-700 transform group-hover:translate-x-2 ease-in-out">
+            <ArrowRight size={24} />
           </div>
-        </Button>
+        </div>
       </div>
     </Section>
   );

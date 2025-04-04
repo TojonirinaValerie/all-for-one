@@ -23,7 +23,6 @@ import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronDown, ChevronUp, Star } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 const getTestimonial = async ({}: {
   page?: number;
@@ -136,10 +135,7 @@ const TestimonialCard = ({
       opacity: 1,
       scale: 1,
       y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
@@ -148,11 +144,7 @@ const TestimonialCard = ({
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.4,
-        delay: 0.2,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.4, delay: 0.2, ease: "easeOut" },
     },
   };
 
@@ -161,11 +153,7 @@ const TestimonialCard = ({
     visible: {
       opacity: 1,
       scale: 1,
-      transition: {
-        duration: 0.3,
-        delay: 0.3,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.3, delay: 0.3, ease: "easeOut" },
     },
   };
 
@@ -177,7 +165,10 @@ const TestimonialCard = ({
       viewport={{ once: true }}
     >
       <Card
-        className={cn("bg-[#0A0C0F0D] rounded-3xl shadow-none relative px-4", className)}
+        className={cn(
+          "bg-[#0A0C0F0D] rounded-3xl shadow-none relative px-4",
+          className
+        )}
       >
         <CardContent className="flex flex-col p-2 h-full gap-4">
           <motion.p
@@ -259,18 +250,6 @@ const TestimonialCard = ({
 };
 
 export default function TestimonialSection() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const { data: testimonials } = useQuery<Testimonial[]>({
     queryKey: ["testimonials"],
     queryFn: () => getTestimonial({}),
@@ -290,17 +269,13 @@ export default function TestimonialSection() {
   const pulseVariants = {
     pulse: {
       scale: [1, 1.5, 1],
-      transition: {
-        duration: 1,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
+      transition: { duration: 1, repeat: Infinity, ease: "easeInOut" },
     },
   };
 
   return (
     <motion.div
-      className="w-full h-[100%] sm:h-auto md:h-auto bg-[#EEF2F7] py-16"
+      className="w-full bg-[#EEF2F7] py-16"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -308,7 +283,7 @@ export default function TestimonialSection() {
     >
       <Section>
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 gap-6 items-start">
             <div className="flex flex-col items-start justify-between text-left min-h-[300px] h-full">
               <div>
                 <SectionTitle>
@@ -319,13 +294,11 @@ export default function TestimonialSection() {
                   </SectionTitleTitle>
                   <SectionTitleDescription align="left">
                     Lorem ipsum dolor a amet, consectetur adipiscing elit.
-                    Vestibulum feugiat pretium velit ac scelerisque. In vitae
-                    ligula eget ligula pulvinar rutrum convallis id.
+                    Vestibulum feugiat pretium velit ac scelerisque.
                   </SectionTitleDescription>
                 </SectionTitle>
               </div>
-
-              <div className="pb-6 max-md:hidden">
+              <div className="pb-6">
                 <Button
                   variant="outline"
                   className="rounded-full border-gray-300 cursor-pointer text-base flex px-6 py-5 items-center font-[300] bg-[#00000000] hover:bg-primary hover:text-white"
@@ -338,43 +311,28 @@ export default function TestimonialSection() {
                 </Button>
               </div>
             </div>
-
             <div>
               <Carousel
                 opts={{ align: "center", loop: false }}
-                orientation={isMobile ? "horizontal" : "vertical"}
-                className="w-full lg:h-[700px] sm:h-[400px] md:h-[400px]"
+                orientation="vertical"
+                className="w-full h-[700px] md:h-[500px] sm:h-auto"
               >
-                <CarouselContent className="-mt-1 lg:h-[700px] md:h-[400px] sm:h-[400px] space-y-4">
-                  {reviews.map((testimonial, index) => (
+                <CarouselContent className="-mt-1 h-[700px] space-y-4 md:h-[500px] sm:h-auto">
+                  {reviews.map((testimonial) => (
                     <CarouselItem
                       key={testimonial.id}
-                      className="pt-1 md:basis-1/3"
+                      className="pt-1 basis-1/3"
                     >
-                      <TestimonialCard
-                        testimonial={testimonial}
-                        className={cn({
-                          "mt-4": index > 0,
-                        })}
-                      />
+                      <TestimonialCard testimonial={testimonial} />
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                {isMobile ? (
-                  <>
-                    <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 border border-gray-200" />
-                    <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 border border-gray-200" />
-                  </>
-                ) : (
-                  <>
-                    <CarouselPrevious className="absolute left-1/2 -translate-x-1/2 top-0 -translate-y-full bg-white hover:bg-gray-100 border border-gray-200">
-                      <ChevronUp className="h-4 w-4" />
-                    </CarouselPrevious>
-                    <CarouselNext className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-full bg-white hover:bg-gray-100 border border-gray-200">
-                      <ChevronDown className="h-4 w-4" />
-                    </CarouselNext>
-                  </>
-                )}
+                <CarouselPrevious className="absolute left-1/2 -translate-x-1/2 top-0 -translate-y-full bg-white hover:bg-gray-100 border border-gray-200">
+                  <ChevronUp className="h-4 w-4" />
+                </CarouselPrevious>
+                <CarouselNext className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-full bg-white hover:bg-gray-100 border border-gray-200">
+                  <ChevronDown className="h-4 w-4" />
+                </CarouselNext>
               </Carousel>
             </div>
           </div>

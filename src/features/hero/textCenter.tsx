@@ -37,12 +37,12 @@ export function TextCenter() {
         <Button className="bg-primary rounded-4xl h-16 w-80 not-2xl:h-12 not-lg:w-80 xl:mx-auto">
           Nous Contacter
         </Button>
-        <Button className="border border-primary hover:bg-[#dce4ef66] text-primary bg-[#dce4ef66] rounded-4xl h-16 w-80 not-2xl:h-12 not-lg:w-80 group relative flex items-center justify-center xl:mx-auto">
+        <div className=" border border-primary hover:bg-[#dce4ef66]  h-16 w-80 text-primary bg-[#dce4ef66] rounded-4xl not-2xl:h-12 not-lg:w-80 group relative flex items-center justify-center xl:mx-auto">
           <div className="text-center">Obtenir un Devis</div>
-          <div className="w-0 opacity-0 group-hover:block group-hover:w-8 group-hover:opacity-100 transition-all duration-700 transform group-hover:translate-x-2 ease-in-out">
-            <ArrowRight className="h-14 w-14" />
+          <div className="w-0 opacity-0 group-hover:block group-hover:w-12 group-hover:opacity-100 transition-all duration-700 transform group-hover:translate-x-2 ease-in-out">
+            <ArrowRight size={28} />
           </div>
-        </Button>
+        </div>
       </div>
     </div>
   );
