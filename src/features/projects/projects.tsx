@@ -20,22 +20,22 @@ const ProjectsData: ProjectDataType[] = [
   {
     title: "All Tracks",
     description: "",
-    image: "http://localhost:3000/assets/project1.png",
+    image: "/assets/project1.png",
   },
   {
     title: "All Tracks",
     description: "",
-    image: "http://localhost:3000/assets/project2.png",
+    image: "/assets/project2.png",
   },
   {
     title: "All Tracks",
     description: "",
-    image: "http://localhost:3000/assets/project3.png",
+    image: "/assets/project3.png",
   },
   {
     title: "All Tracks",
     description: "",
-    image: "http://localhost:3000/assets/project4.png",
+    image: "/assets/project4.png",
   },
 ];
 const Projects = () => {
