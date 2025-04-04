@@ -40,7 +40,7 @@ const ProjectsData: ProjectDataType[] = [
 ];
 const Projects = () => {
   return (
-    <Section className="flex flex-col items-center text bg-primary/4 min-h-screen gap-6">
+    <Section className="flex flex-col items-center text bg-primary/4 gap-6">
       <div className="flex flex-col items-center w-full max-w-[1500px]">
         <SectionTitle>
           <SectionTitleEng>OUR PROJECT</SectionTitleEng>

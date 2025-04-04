@@ -308,7 +308,7 @@ export default function TestimonialSection() {
       <Section>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-            <div className="flex flex-col items-start justify-between text-left min-h-[300px]">
+            <div className="flex flex-col items-start justify-between text-left min-h-[300px] h-full">
               <div>
                 <SectionTitle>
                   <SectionTitleEng align="left">TESTIMONIALES</SectionTitleEng>
@@ -324,10 +324,11 @@ export default function TestimonialSection() {
                 </SectionTitle>
               </div>
 
-              <div className="mt-">
+              <div className="pb-6">
                 <Button
                   variant="outline"
-                  className="rounded-full border-gray-300 flex px-4 py-4 items-center gap-4"
+                  className="rounded-full border-gray-300 cursor-pointer text-base flex px-6 py-5 items-center font-[300] bg-[#00000000] hover:bg-primary hover:text-white"
+                  color="#00000000"
                 >
                   Join our Community
                   <motion.div variants={pulseVariants} animate="pulse">
