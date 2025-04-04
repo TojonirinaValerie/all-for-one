@@ -64,8 +64,8 @@ const Projects = () => {
             <ProjectsItem key={`${index}-${item.title}`} data={item} />
           ))}
         </div>
-        <Button className="border border-primary hover:bg-[#dce4ef66] text-primary bg-[#dce4ef66] rounded-4xl h-16 w-80 not-2xl:h-12 not-lg:w-80 group relative flex items-center justify-center xl:mx-auto">
-          <div className="text-center">Obtenir un Devis</div>
+        <Button className="mt-6 border border-primary hover:bg-[#dce4ef66] text-primary bg-[#dce4ef66] rounded-4xl h-16 w-80 not-2xl:h-12 not-lg:w-80 group relative flex items-center justify-center xl:mx-auto">
+          <div className="text-center">Voir plus</div>
           <div className="w-0 opacity-0 group-hover:block group-hover:w-8 group-hover:opacity-100 transition-all duration-700 transform group-hover:translate-x-2 ease-in-out">
             <ArrowRight className="h-14 w-14" />
           </div>

@@ -9,6 +9,10 @@ body{
   background-position-y: -1500px;
 }
 
+.project-item{
+  background-image: linear-gradient(to bottom, #00000000 0%, #000000 70%, #000000 100%);
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

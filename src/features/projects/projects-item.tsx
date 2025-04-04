@@ -30,8 +30,9 @@ const ProjectsItem: React.FC<{ data: ProjectDataType }> = ({ data }) => {
         animate={{ opacity: 0 }}
         whileHover={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className="absolute p-6 z-50 bg-gradient-to-b from-[#00000000] to-[#000000] h-full flex flex-col justify-between"
+        className="absolute p-6 z-50  h-full flex flex-col justify-between project-item"
       >
+        {/* bg-gradient-to-b from-[#00000000] to-[#000000] */}
         <div className="flex flex-row justify-end">
           <p className="bg-[#D94336] text-[#ECF0F3] px-5 py-1 rounded-[10px]">
             2024
@@ -49,7 +50,7 @@ const ProjectsItem: React.FC<{ data: ProjectDataType }> = ({ data }) => {
               Role: Dashboard
             </p>
           </div>
-          <p className="text-project-card-foreground leading-5 text-md max-2xl:text-lg font-[300] max-2xl:leading-6">
+          <p className="text-project-card-foreground text-md 2xl:text-lg font-[300] leading-6 2xl:leading-8">
             Un logiciel equipé d’un dispositif électronique permettant de suivre
             en temps réel les déplacements des agents (coursiers, livreurs, etc)
             d’une entreprise.
