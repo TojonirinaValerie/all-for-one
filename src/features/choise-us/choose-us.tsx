@@ -17,19 +17,19 @@ const chooseUsData: DataSectionType[] = [
   },
   {
     title: "Créativité et Résultat ",
-    icon: <Lightbulb color="white" size={38} strokeWidth={1.25}  />,
+    icon: <Lightbulb color="white" size={38} strokeWidth={1.25} />,
     description:
       "Nous allions créativité et stratégie pour concevoir des expériences digitales uniques qui boostent votre visibilité et votre chiffre d'affaires.",
   },
   {
     title: "Du Concept à la Réalisation",
-    icon: <Puzzle color="white" size={38} strokeWidth={1.25}  />,
+    icon: <Puzzle color="white" size={38} strokeWidth={1.25} />,
     description:
       "Nous vous accompagnons à chaque étape de votre projet, de la stratégie à la mise en ligne, pour garantir un résultat à la hauteur de vos attentes.",
   },
   {
     title: "Un Partenaire de Confiance",
-    icon: <HeartHandshake color="white" size={38} strokeWidth={1.25}  />,
+    icon: <HeartHandshake color="white" size={38} strokeWidth={1.25} />,
     description:
       "En choisissant notre agence, bénéficiez de notre aide pour vous démarquer de la concurrence.",
   },
@@ -48,9 +48,11 @@ const ChooseUs = () => {
           feugiat pretium velit ac scelerisque. <br />
           In vitae ligula eget ligula pulvinar rutrum convallis id.{" "}
         </p>
-        <div className="grid grid-cols-2 gap-16 mt-10 
+        <div
+          className="grid grid-cols-2 gap-16 mt-10 
         max-2xl:gap-10
-        max-md:grid-cols-1">
+        max-md:grid-cols-1"
+        >
           {chooseUsData.map((item, index) => (
             <ChooseUsItem key={`${item.title}-${index}`} data={item} />
           ))}
