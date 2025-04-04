@@ -46,7 +46,7 @@ const Workflow = () => {
       <div className="bg-[#F5F7F9AA] my-[250px] w-full flex flex-row justify-center max-md:my-0 
       max-md:bg-gradient-to-t max-md:from-[#F5F7F9] to-[#FFFFFF]">
         <div
-          className="lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px] h-[max-content] flex flex-row items-center 
+          className=" 2xl:px-0 lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px] h-[max-content] flex flex-row items-center 
           max-md:flex-col max-lg:mb-0 max-lg:pb-0 max-md:pt-0 w-full max-w-[1500px] max-md:pb-0 max-md:mb-0"
         >
           <motion.div
