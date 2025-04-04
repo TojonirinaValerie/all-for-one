@@ -42,8 +42,8 @@ const Workflow = () => {
   const isInView2 = useInView(ref2, { once: true });
 
   return (
-    <Section className="lg:px-0 px-0 sm:px-0 md:px-0 bg-white max-md:pt-8">
-      <div className="bg-[#F5F7F9] my-[250px] w-full flex flex-row justify-center max-md:my-0 
+    <Section className="lg:px-0 px-0 sm:px-0 md:px-0 max-md:pt-8">
+      <div className="bg-[#F5F7F9AA] my-[250px] w-full flex flex-row justify-center max-md:my-0 
       max-md:bg-gradient-to-t max-md:from-[#F5F7F9] to-[#FFFFFF]">
         <div
           className="lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px] h-[max-content] flex flex-row items-center 

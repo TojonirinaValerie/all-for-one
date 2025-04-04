@@ -17,12 +17,7 @@ function HomePage() {
       <ChooseUs />
       <ServicesSection />
       <Area />
-      <div className="w-full bg-[url(/assets/bg_workflow.png)] bg-no-repeat bg-cover bg-fixed">
-        {/* <img
-          src="/assets/bg_workflow.png"
-          className="w-full h-full absolute object-cover right-0"
-          alt=""
-        /> */}
+      <div className="w-full bg-[url(/assets/bg_workflow.png)] bg-no-repeat bg-cover bg-[position:top_-100px] background-workflow">
         <Workflow />
         <Deliverables />
       </div>

@@ -42,10 +42,10 @@ const Deliverables = () => {
   const ref2 = useRef(null);
   const isInView2 = useInView(ref2, { once: true });
   return (
-    <Section className="lg:px-0 px-0 sm:px-0 md:px-0 bg-white pb-[200px] max-lg:pb-[100px] max-md:pb-8 max-md:pt-0 max-md:mt-0">
+    <Section className="lg:px-0 px-0 sm:px-0 md:px-0 pb-[200px] max-lg:pb-[100px] max-md:pb-8 max-md:pt-0 max-md:mt-0">
       <div
         className="flex flex-row justify-center lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px] max-lg:mt-0 max-lg:pt-0 
-      max-lg:bg-[#FFFFFF] bg-[#F5F7F9] w-full max-md:pt-0 max-md:mt-0"
+      max-lg:bg-[#FFFFFF] bg-[#F5F7F9AA] w-full max-md:pt-0 max-md:mt-0"
       >
         <div
           className="gap-4 h-[max-content] flex flex-row items-center w-full max-w-[1500px]

@@ -4,6 +4,11 @@
 body{
   user-select: none;
 }
+
+.background-workflow{
+  background-position-y: -1200px;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
