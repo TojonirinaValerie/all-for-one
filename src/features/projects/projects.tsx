@@ -45,7 +45,7 @@ const Projects = () => {
         <SectionTitle>
           <SectionTitleEng>OUR PROJECT</SectionTitleEng>
           <SectionTitleTitle>
-            Nos
+            Nos{" "}
             <SectionTitleAccent>Projets </SectionTitleAccent>
           </SectionTitleTitle>
           <SectionTitleDescription>

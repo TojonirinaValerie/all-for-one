@@ -88,7 +88,7 @@ export default function ServicesSection() {
           <SectionTitle>
             <SectionTitleEng>OUR SERVICE</SectionTitleEng>
             <SectionTitleTitle>
-              Nos
+              Nos{" "}
               <SectionTitleAccent>Services </SectionTitleAccent>
             </SectionTitleTitle>
             <SectionTitleDescription>

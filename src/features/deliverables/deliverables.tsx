@@ -42,52 +42,57 @@ const Deliverables = () => {
   const ref2 = useRef(null);
   const isInView2 = useInView(ref2, { once: true });
   return (
-    <Section className="lg:px-0 px-0 sm:px-0 md:px-0 bg-white pb-[200px] max-lg:pb-[100px] max-md:pb-8 ">
-      <section
-        className="lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px] gap-4 h-[max-content] flex flex-row items-center 
-        max-lg:mt-0 max-lg:pt-0 max-lg:bg-[#FFFFFF] bg-[#F5F7F9] w-full
-      max-md:flex-col-reverse max-md:pb-0 max-lg:pb-8"
+    <Section className="lg:px-0 px-0 sm:px-0 md:px-0 bg-white pb-[200px] max-lg:pb-[100px] max-md:pb-8 max-md:pt-0 max-md:mt-0">
+      <div
+        className="flex flex-row justify-center lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px] max-lg:mt-0 max-lg:pt-0 
+      max-lg:bg-[#FFFFFF] bg-[#F5F7F9] w-full max-md:pt-0 max-md:mt-0"
       >
-        <motion.div
-          ref={ref}
-          initial={{ x: -100, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : {}}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="lg:relative flex-1"
+        <div
+          className="gap-4 h-[max-content] flex flex-row items-center w-full max-w-[1500px]
+           max-md:pt-0 max-md:mt-0
+            max-md:flex-col-reverse max-md:pb-0 max-lg:pb-8 "
         >
-          <div className="flex flex-col items-end justify-center gap-16 lg:absolute left-0 top-[-330px]">
-            {workflowData.map((item, index) => (
-              <DeliverableItem
-                data={item}
-                withMargin={index === 1 ? false : true}
-                key={`${item.title}`}
-              />
-            ))}
-          </div>
-        </motion.div>
-        <motion.div
-          ref={ref2}
-          initial={{ y: 100, opacity: 0 }}
-          animate={isInView2 ? { y: 0, opacity: 1 } : {}}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="flex flex-col flex-1 max-w-[610px] max-2xl:max-w-[461px] max-xl:max-w-[400px] py-32 text"
-        >
-          <SectionTitle>
-            <SectionTitleEng align="left">
-              WE OFFER YOU DELIVERABLES
-            </SectionTitleEng>
-            <SectionTitleTitle align="left">
-              Nous vous offrons des{" "}
-              <SectionTitleAccent>livrables </SectionTitleAccent>
-            </SectionTitleTitle>
-            <SectionTitleDescription align="left">
-              Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
-              feugiat pretium velit ac scelerisque. In vitae ligula eget ligula
-              pulvinar rutrum convallis id.
-            </SectionTitleDescription>
-          </SectionTitle>
-        </motion.div>
-      </section>
+          <motion.div
+            ref={ref}
+            initial={{ x: -100, opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : {}}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="lg:relative flex-1"
+          >
+            <div className="flex flex-col items-end justify-center gap-16 lg:absolute left-0 top-[-330px]">
+              {workflowData.map((item, index) => (
+                <DeliverableItem
+                  data={item}
+                  withMargin={index === 1 ? false : true}
+                  key={`${item.title}`}
+                />
+              ))}
+            </div>
+          </motion.div>
+          <motion.div
+            ref={ref2}
+            initial={{ y: 100, opacity: 0 }}
+            animate={isInView2 ? { y: 0, opacity: 1 } : {}}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="flex flex-col flex-1 max-w-[610px] max-2xl:max-w-[461px] max-xl:max-w-[400px] py-32 text"
+          >
+            <SectionTitle>
+              <SectionTitleEng align="left">
+                WE OFFER YOU DELIVERABLES
+              </SectionTitleEng>
+              <SectionTitleTitle align="left">
+                Nous vous offrons des{" "}
+                <SectionTitleAccent>livrables </SectionTitleAccent>
+              </SectionTitleTitle>
+              <SectionTitleDescription align="left">
+                Lorem ipsum dolor a amet, consectetur adipiscing elit.
+                Vestibulum feugiat pretium velit ac scelerisque. In vitae ligula
+                eget ligula pulvinar rutrum convallis id.
+              </SectionTitleDescription>
+            </SectionTitle>
+          </motion.div>
+        </div>
+      </div>
     </Section>
   );
 };
