@@ -1,6 +1,12 @@
 "use client";
 
 import { Section } from "@/components/section";
+import SectionTitle, {
+  SectionTitleAccent,
+  SectionTitleDescription,
+  SectionTitleEng,
+  SectionTitleTitle,
+} from "@/components/section-title";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
@@ -79,17 +85,18 @@ export default function ServicesSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-sm uppercase tracking-wider text-slate-600">
-            O U R S E R V I C E
-          </h2>
-          <h1 className="text-3xl md:text-4xl font-bold mt-2">
-            Nos <span className="text-red-500">Services</span>
-          </h1>
-          <p className="mt-4 text-slate-600 max-w-3xl mx-auto">
-            Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
-            feugiat pretium velit ac scelerisque. In vitae ligula eget ligula
-            pulvinar rutrum convallis id.
-          </p>
+          <SectionTitle>
+            <SectionTitleEng>OUR SERVICE</SectionTitleEng>
+            <SectionTitleTitle>
+              Nos
+              <SectionTitleAccent>Services </SectionTitleAccent>
+            </SectionTitleTitle>
+            <SectionTitleDescription>
+              Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
+              feugiat pretium velit ac scelerisque. In vitae ligula eget ligula
+              pulvinar rutrum convallis id.
+            </SectionTitleDescription>
+          </SectionTitle>
         </motion.div>
 
         <motion.div

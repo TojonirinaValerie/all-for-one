@@ -7,6 +7,12 @@ import "./style.css";
 import WorkflowItem from "./workflow-item";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import SectionTitle, {
+  SectionTitleAccent,
+  SectionTitleDescription,
+  SectionTitleEng,
+  SectionTitleTitle,
+} from "@/components/section-title";
 
 const workflowData: DataSectionType[] = [
   {
@@ -36,9 +42,11 @@ const Workflow = () => {
   const isInView2 = useInView(ref2, { once: true });
 
   return (
-    <Section className="lg:px-0 px-0 sm:px-0 md:px-0 bg-white">
-      <div className="lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px] h-[max-content] flex flex-row items-center bg-[#F5F7F9] my-[250px]
-      max-lg:flex-col max-lg:mb-0 max-lg:pb-0">
+    <Section className="lg:px-0 px-0 sm:px-0 md:px-0 bg-white max-md:pt-8">
+      <div
+        className="lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px] h-[max-content] flex flex-row items-center bg-[#F5F7F9] my-[250px]
+      max-md:flex-col max-lg:mb-0 max-lg:pb-0 max-md:pt-0"
+      >
         <motion.div
           ref={ref2}
           initial={{ y: 100, opacity: 0 }}
@@ -46,15 +54,17 @@ const Workflow = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="flex flex-col flex-1 max-w-[561px] py-32 z-[90]"
         >
-          <h2 className="text-foreground/50 tracking-widest max-lg:text-center">OUR WORKFLOW</h2>
-          <h1 className="text-xxl font-[800] max-lg:text-center">
-            Notre flux de <span className="text-accent">travail</span> ?
-          </h1>
-          <p className="text-foreground/50 mt-2  max-lg:text-center">
-            Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
-            feugiat pretium velit ac scelerisque. In vitae ligula eget ligula
-            pulvinar rutrum convallis id.
-          </p>
+          <SectionTitle>
+            <SectionTitleEng align="left">OUR WORKFLOW</SectionTitleEng>
+            <SectionTitleTitle align="left">
+              Notre flux de <SectionTitleAccent>travail</SectionTitleAccent> ?
+            </SectionTitleTitle>
+            <SectionTitleDescription align="left">
+              Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
+              feugiat pretium velit ac scelerisque. In vitae ligula eget ligula
+              pulvinar rutrum convallis id.
+            </SectionTitleDescription>
+          </SectionTitle>
         </motion.div>
         <motion.div
           ref={ref}

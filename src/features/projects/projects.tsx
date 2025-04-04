@@ -43,26 +43,17 @@ const Projects = () => {
     <Section className="flex flex-col items-center text bg-primary/4 min-h-screen gap-6">
       <div className="flex flex-col items-center w-full max-w-[1500px]">
         <SectionTitle>
-          <SectionTitleEng>WHY CHOOSE US ?</SectionTitleEng>
+          <SectionTitleEng>OUR PROJECT</SectionTitleEng>
           <SectionTitleTitle>
-            Pourquoi nous <SectionTitleAccent>choisir</SectionTitleAccent> ?
+            Nos
+            <SectionTitleAccent>Projets </SectionTitleAccent>
           </SectionTitleTitle>
           <SectionTitleDescription>
             Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
-            feugiat pretium velit ac scelerisque. <br />
-            In vitae ligula eget ligula pulvinar rutrum convallis id.{" "}
+            feugiat pretium velit ac scelerisque. In vitae ligula eget ligula
+            pulvinar rutrum convallis id.
           </SectionTitleDescription>
         </SectionTitle>
-
-        <h2 className="text-foreground/50 tracking-widest">WHY CHOOSE US ?</h2>
-        <h1 className="text-xxl font-[800] text-center">
-          Pourquoi nous <span className="text-accent">choisir</span> ?
-        </h1>
-        <p className="text-foreground/50 text-center mt-2">
-          Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
-          feugiat pretium velit ac scelerisque. <br />
-          In vitae ligula eget ligula pulvinar rutrum convallis id.{" "}
-        </p>
         <div
           className="w-full grid grid-cols-2 gap-8 mt-10
             max-2xl:gap-10

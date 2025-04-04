@@ -7,6 +7,12 @@ import DeliverableItem from "./deliverable-item";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
+import SectionTitle, {
+  SectionTitleAccent,
+  SectionTitleDescription,
+  SectionTitleEng,
+  SectionTitleTitle,
+} from "@/components/section-title";
 
 const workflowData: DataSectionType[] = [
   {
@@ -36,10 +42,11 @@ const Deliverables = () => {
   const ref2 = useRef(null);
   const isInView2 = useInView(ref2, { once: true });
   return (
-    <Section className="lg:px-0 px-0 sm:px-0 md:px-0 bg-white pb-[400px]">
+    <Section className="lg:px-0 px-0 sm:px-0 md:px-0 bg-white pb-[200px] max-lg:pb-[100px] max-md:pb-8 ">
       <section
-        className="lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px] h-[max-content] flex flex-row items-center max-lg:mt-0 max-lg:pt-0 max-lg:bg-[#FFFFFF] bg-[#F5F7F9] w-full
-      max-lg:flex-col-reverse max-lg:pb-8"
+        className="lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px] gap-4 h-[max-content] flex flex-row items-center 
+        max-lg:mt-0 max-lg:pt-0 max-lg:bg-[#FFFFFF] bg-[#F5F7F9] w-full
+      max-md:flex-col-reverse max-md:pb-0 max-lg:pb-8"
       >
         <motion.div
           ref={ref}
@@ -65,18 +72,20 @@ const Deliverables = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="flex flex-col flex-1 max-w-[610px] max-2xl:max-w-[461px] max-xl:max-w-[400px] py-32 text"
         >
-          <h2 className="text-foreground/50 tracking-widest max-lg:text-center">
-            WE OFFER YOU DELIVERABLES
-          </h2>
-          <h1 className="text-xxl font-[800] max-lg:text-center">
-            Nous vous offrons des{" "}
-            <span className="text-accent">livrables </span>
-          </h1>
-          <p className="text-foreground/50 mt-2 max-lg:text-center">
-            Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
-            feugiat pretium velit ac scelerisque. In vitae ligula eget ligula
-            pulvinar rutrum convallis id.
-          </p>
+          <SectionTitle>
+            <SectionTitleEng align="left">
+              WE OFFER YOU DELIVERABLES
+            </SectionTitleEng>
+            <SectionTitleTitle align="left">
+              Nous vous offrons des{" "}
+              <SectionTitleAccent>livrables </SectionTitleAccent>
+            </SectionTitleTitle>
+            <SectionTitleDescription align="left">
+              Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
+              feugiat pretium velit ac scelerisque. In vitae ligula eget ligula
+              pulvinar rutrum convallis id.
+            </SectionTitleDescription>
+          </SectionTitle>
         </motion.div>
       </section>
     </Section>

@@ -1,6 +1,12 @@
 "use client";
 
 import { Section } from "@/components/section";
+import SectionTitle, {
+  SectionTitleAccent,
+  SectionTitleDescription,
+  SectionTitleEng,
+  SectionTitleTitle,
+} from "@/components/section-title";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -302,20 +308,20 @@ export default function TestimonialSection() {
       <Section>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-            <div className="flex flex-col items-start justify-between space-y-4 text-left min-h-[300px]">
+            <div className="flex flex-col items-start justify-between text-left min-h-[300px]">
               <div>
-                <h3 className="text-gray-500 uppercase tracking-wider text-sm font-medium">
-                  TESTIMONIALES
-                </h3>
-                <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
-                  Ce que les gens{" "}
-                  <span className="text-red-500">pense de nous</span>
-                </h2>
-                <p className="text-gray-600 text-sm md:text-base max-w-md">
-                  Lorem ipsum dolor a amet, consectetur adipiscing elit.
-                  Vestibulum feugiat pretium velit ac scelerisque. In vitae
-                  ligula eget ligula pulvinar rutrum convalis id.
-                </p>
+                <SectionTitle>
+                  <SectionTitleEng align="left">TESTIMONIALES</SectionTitleEng>
+                  <SectionTitleTitle align="left">
+                    Ce que les gens{" "}
+                    <SectionTitleAccent>pense de nous</SectionTitleAccent>
+                  </SectionTitleTitle>
+                  <SectionTitleDescription align="left">
+                    Lorem ipsum dolor a amet, consectetur adipiscing elit.
+                    Vestibulum feugiat pretium velit ac scelerisque. In vitae
+                    ligula eget ligula pulvinar rutrum convallis id.
+                  </SectionTitleDescription>
+                </SectionTitle>
               </div>
 
               <div className="mt-">

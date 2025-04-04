@@ -6,34 +6,39 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ children }) => {
   return <>{children}</>;
 };
 
+const getTextAlign = (align?: "right" | "left" | "center"): string => {
+  if (align === "center") return "text-center";
+  if (align === "left") return "text-left";
+  if (align === "right") return "text-right";
+  return "text-center";
+};
 
 type SectionTitleTitleProps = {
   children: React.ReactNode;
+  align?: "right" | "left" | "center";
 };
 export const SectionTitleTitle: React.FC<SectionTitleTitleProps> = ({
   children,
+  align,
 }) => {
-  return <h1 className="text-xxl font-[800] text-center">{children}</h1>;
+  return (
+    <h1 className={`text-xxl font-[800] text-center max-md:text-center ${getTextAlign(align)}`}>
+      {children}
+    </h1>
+  );
 };
-// ${
-//     align === "right"
-//       ? " text-right "
-//       : align === "left"
-//       ? " text-left "
-//       : "text-center "
-//   }
 
 type SectionTitleEngProps = {
   children: React.ReactNode;
+  align?: "right" | "left" | "center";
 };
 
 export const SectionTitleEng: React.FC<SectionTitleEngProps> = ({
   children,
+  align,
 }) => {
   return (
-    <h2
-      className={`text-foreground/50 tracking-widest `}
-    >
+    <h2 className={`text-foreground/50 tracking-widest max-md:text-center uppercase ${getTextAlign(align)}`}>
       {children}
     </h2>
   );
@@ -41,11 +46,16 @@ export const SectionTitleEng: React.FC<SectionTitleEngProps> = ({
 
 type SectionTitleDescriptionProps = {
   children: React.ReactNode;
+  align?: "right" | "left" | "center";
 };
 export const SectionTitleDescription: React.FC<
   SectionTitleDescriptionProps
-> = ({ children }) => {
-  return <p className="text-foreground/50 text-center mt-2">{children}</p>;
+> = ({ children, align }) => {
+  return (
+    <p className={`text-foreground/50 text-center mt-2 max-md:text-center ${getTextAlign(align)}`}>
+      {children}
+    </p>
+  );
 };
 
 type SectionTitleAccentProps = {
