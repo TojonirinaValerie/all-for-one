@@ -5,7 +5,7 @@ import { MapBlock } from "./mapBlock";
 
 export function Contact() {
   return (
-    <Section className="w-full flex flex-row justify-center">
+    <Section className="w-full flex flex-row justify-center" id="contact">
       <div>
         <TextContact />
         <SecondBlock />

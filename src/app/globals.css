@@ -282,3 +282,7 @@ body{
 .leaflet-container {
   z-index: 0 !important;
 }
+
+html {
+  scroll-behavior: smooth;
+}

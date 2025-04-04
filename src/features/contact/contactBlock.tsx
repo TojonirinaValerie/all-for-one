@@ -6,7 +6,7 @@ import { MapPin, Phone, Send } from "lucide-react";
 export function ContactBlock() {
   return (
     <div className="h-[550px] max-w-[630px] flex-1 rounded-4xl border p-7 flex flex-col gap-6 max-md:border-none">
-      <div className="flex flex-wrap gap-3 w-full max-md:flex-col">
+      <div className="flex flex-wrap gap-3 w-full not-lg:flex-col">
         <InputForm icon={<Send/>} title="Your Mail" placeholder="example@test.com" />
         <InputForm icon={<Phone/>} title="Your phone" placeholder="+261-0-0-0-000" />
       </div>

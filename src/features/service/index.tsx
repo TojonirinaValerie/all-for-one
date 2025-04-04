@@ -77,7 +77,7 @@ const cardVariants = {
 
 export default function ServicesSection() {
   return (
-    <Section>
+    <Section id="services">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-12"
