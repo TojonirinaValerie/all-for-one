@@ -207,15 +207,15 @@ export function Footer() {
             >
               Restez informé de nos dernières actualités
             </motion.p>
-            <motion.div variants={textVariants(1.3)} className="flex max-w-md">
+            <motion.div variants={textVariants(1.3)} className="relative flex max-w-md">
               <Input
                 type="email"
                 placeholder="email"
-                className="rounded-l-full h-12 text-gray-600 border-r-0 bg-[#E0E7E9]"
+                className="rounded-full h-12 text-gray-600 border-r-0 bg-[#E0E7E9]"
               />
               <motion.button
                 type="submit"
-                className="rounded-full h-12 w-12 bg-red-500 hover:bg-red-600 flex items-center justify-center"
+                className="rounded-full h-12 w-12 bg-red-500 hover:bg-red-600 flex items-center justify-center absolute right-0"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
