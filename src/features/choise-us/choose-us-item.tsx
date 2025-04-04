@@ -9,8 +9,8 @@ const ChooseUsItem: React.FC<{ data: DataSectionType }> = ({ data }) => {
       <div className="bg-blue-icon-bg p-4 w-[max-content] rounded-[20px]">
         {icon}
       </div>
-      <h3 className="text-xl font-[600] py-1 max-2xl:text-lg">{title}</h3>
-      <p className="text-foreground/50 text-lg leading-7 max-2xl:text-base">{description}</p>
+      <h3 className="text-lg font-[600] py-1 max-2xl:text-lg">{title}</h3>
+      <p className="text-foreground/50 text-sm leading-7 max-2xl:text-sm">{description}</p>
     </div>
   );
 };
