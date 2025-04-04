@@ -52,7 +52,7 @@ export const SectionTitleDescription: React.FC<
   SectionTitleDescriptionProps
 > = ({ children, align }) => {
   return (
-    <p className={`text-foreground/50 text-center mt-2 max-md:text-center font-light ${getTextAlign(align)}`}>
+    <p className={`text-foreground/50 text-center mt-2 max-md:text-center ${getTextAlign(align)}`}>
       {children}
     </p>
   );

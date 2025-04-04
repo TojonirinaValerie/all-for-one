@@ -17,14 +17,14 @@
 @font-face {
   font-family: 'Nexa';
   src: url('/fonts/nexa/Nexa-Regular.ttf') format('truetype');
-  font-weight: 400;
+  font-weight: 350;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Nexa';
   src: url('/fonts/nexa/Nexa-Book.ttf') format('truetype');
-  font-weight: 450;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -45,7 +45,7 @@
 @font-face {
   font-family: 'Nexa';
   src: url('/fonts/nexa/Nexa-Bold.ttf') format('truetype');
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -59,7 +59,7 @@
 @font-face {
   font-family: 'Nexa';
   src: url('/fonts/nexa/Nexa-Black.ttf') format('truetype');
-  font-weight: 900;
+  font-weight: 700;
   font-style: normal;
 }
 
