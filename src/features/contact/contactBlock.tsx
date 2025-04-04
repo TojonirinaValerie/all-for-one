@@ -4,7 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 export function ContactBlock() {
   return (
-    <div className="h-[550px] w-[630px] rounded-4xl border p-7 flex flex-col gap-6">
+    <div className="h-[550px] max-w-[630px] flex-1 rounded-4xl border p-7 flex flex-col gap-6 max-md:border-none">
       <div className="flex flex-wrap gap-3 w-full">
         <InputForm title="Your Mail" placeholder="example@test.com" />
         <InputForm title="Your phone" placeholder="+261-0-0-0-000" />

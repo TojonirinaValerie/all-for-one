@@ -4,7 +4,7 @@ interface MenuHeaderProps{
 }
 
 export function MenuHeader({title}:MenuHeaderProps){
-    return <span className="h-full px-5 font-light justify-center content-center hover:font-medium text-primary hover:border-b-2 border-b-primary cursor-pointer">
+    return <a href={`#${title.toLowerCase()}`}  className="h-full px-5 text-xs 2xl:text-md font-[5px] justify-center content-center hover:font-medium text-primary hover:border-b-2 border-b-primary">
         {title}
-    </span>
+    </a>
 }

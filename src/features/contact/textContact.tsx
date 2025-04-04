@@ -32,7 +32,7 @@ export default function TextContact() {
           eligendi <br />
           exercitationem architecto nihil.
         </span> */}
-      <div className="bg-[#D8ECFC] rounded-tl-4xl h-52 w-72"></div>
+      <div className="max-md:hidden bg-[#D8ECFC] rounded-tl-4xl h-52 w-72"></div>
     </div>
   );
 }

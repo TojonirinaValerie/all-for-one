@@ -1,4 +1,5 @@
 import ChooseUs from "@/features/choise-us/choose-us";
+import { Contact } from "@/features/contact/contact";
 import Deliverables from "@/features/deliverables/deliverables";
 import { Hero } from "@/features/hero/hero";
 import { Area } from "@/features/other-area/area";
@@ -28,7 +29,7 @@ function HomePage() {
       <Projects />
       <TechnologiaSection />
       <TestimonialSection />
-      {/* <Contact /> */}
+      <Contact />
     </Fragment>
   );
 }
