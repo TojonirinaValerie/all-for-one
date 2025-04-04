@@ -5,7 +5,7 @@ import { TextCenter } from "./textCenter";
 export function Hero() {
     return (
       <div style={{ backgroundImage: "url('assets/bg_afo.webp')", backgroundSize: "cover", height: "100vh", width: "100%" }}>
-        <Section className="flex justify-between h-full">
+        <Section className="flex flex-row justify-between not-xl:flex-col not-xl:gap-5 not-xl:justify-center h-full ">
             <IconLeft/>
             <TextCenter/>
             <div className=" w-12 "/>
