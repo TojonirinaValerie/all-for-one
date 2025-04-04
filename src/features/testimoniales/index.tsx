@@ -177,7 +177,7 @@ const TestimonialCard = ({
       viewport={{ once: true }}
     >
       <Card
-        className={cn("bg-gray-100 rounded-3xl shadow-sm relative", className)}
+        className={cn("bg-[#0A0C0F0D] rounded-3xl shadow-none relative px-4", className)}
       >
         <CardContent className="flex flex-col p-2 h-full gap-4">
           <motion.p
@@ -186,7 +186,7 @@ const TestimonialCard = ({
           >
             {testimonial.comment}
           </motion.p>
-          <div className="flex items-center justify-between gap-3">
+          <div className="flex items-center justify-between gap-3 mt-4">
             <div className="flex items-center gap-3">
               <motion.div variants={avatarVariants}>
                 <Avatar className="w-12 h-12">
@@ -248,6 +248,7 @@ const TestimonialCard = ({
                 alt="Quote"
                 width={100}
                 height={100}
+                className="opacity-30"
               />
             </motion.div>
           </div>

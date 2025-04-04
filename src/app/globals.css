@@ -6,7 +6,7 @@ body{
 }
 
 .background-workflow{
-  background-position-y: -1200px;
+  background-position-y: -1500px;
 }
 
 @custom-variant dark (&:is(.dark *));
