@@ -46,7 +46,7 @@ export function Footer() {
 
   return (
     <footer className="w-full border-t-2 border-[#F2D6D7] bg-white">
-      <div className="py-16 px-8">
+      <div className="py-16 px-8 pl-0">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-6">
           <div className="space-y-1">
             <div className="flex items-start lg:justify-center">

@@ -1,3 +1,5 @@
+"use client"
+
 import { Section } from "@/components/section";
 import TextContact from "./textContact";
 import { SecondBlock } from "./secontBlock";
