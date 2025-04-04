@@ -1,12 +1,16 @@
 import { Section } from "@/components/section";
 import TextContact from "./textContact";
 import { SecondBlock } from "./secontBlock";
+import { MapBlock } from "./mapBlock";
 
-
-
-export function Contact(){
-    return <Section>
-        <TextContact/>
-        <SecondBlock/>
+export function Contact() {
+  return (
+    <Section className="w-full flex flex-row justify-center">
+      <div>
+        <TextContact />
+        <SecondBlock />
+        <MapBlock />
+      </div>
     </Section>
+  );
 }
