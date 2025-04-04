@@ -1,6 +1,10 @@
-
 import { Section } from "@/components/section";
-import SectionTitle, { SectionTitleAccent, SectionTitleDescription, SectionTitleEng, SectionTitleTitle } from "@/components/section-title";
+import SectionTitle, {
+  SectionTitleAccent,
+  SectionTitleDescription,
+  SectionTitleEng,
+  SectionTitleTitle,
+} from "@/components/section-title";
 import { Handshake, HeartHandshake, Lightbulb, Puzzle } from "lucide-react";
 import ChooseUsItem from "./choose-us-item";
 

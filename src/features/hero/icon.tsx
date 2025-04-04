@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 interface IconCompoProps {
@@ -8,10 +9,7 @@ interface IconCompoProps {
   onClick?: () => void;
 }
 
-export function IconCompo({
-  src,
-  hoverSrc,
-}: Readonly<IconCompoProps>) {
+export function IconCompo({ src, hoverSrc }: Readonly<IconCompoProps>) {
   const [iconSrc, setIconSrc] = useState<string>(src);
 
   const handleMouseEnter = () => setIconSrc(hoverSrc);
@@ -23,9 +21,12 @@ export function IconCompo({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <img
+      <Image
         src={iconSrc}
+        width={48}
+        height={48}
         className="filter transition duration-300  hover:grayscale-0"
+        alt={""}
       />
     </div>
   );

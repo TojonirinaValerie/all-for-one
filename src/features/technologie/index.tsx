@@ -34,7 +34,7 @@ export default function TechnologiaSection() {
                   Technology
                 </motion.h3>
                 <motion.h2
-                  className="text-white text-xxl font-[800] mt-2"
+                  className="text-white text-xxl font-black mt-2"
                   variants={fadeInVariants}
                   custom={0.2}
                 >
