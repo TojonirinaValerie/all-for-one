@@ -2,7 +2,7 @@ import { Calendar, Clock, Mail, MapPin, Phone } from "lucide-react";
 
 export function InfoBlock() {
   return (
-    <div className="max-md:hidden max-md:w-full h-[550px] flex-1 w-full flex flex-row justify-center item-center rounded-l-4xl bg-primary py-10 justify-center">
+    <div className="max-lg:hidden max-w-[630px] h-[550px] flex-1 w-full flex flex-row  item-center rounded-l-4xl bg-primary py-10 justify-center">
       <div className="flex flex-col gap-7 h-full justify-center">
         <div className="flex gap-7 text-white font-light">
           <Mail className="h-10 w-10" />

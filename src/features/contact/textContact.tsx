@@ -21,18 +21,7 @@ export default function TextContact() {
           </SectionTitleDescription>
         </SectionTitle>
       </div>
-      {/* <span className="text-gray-400"></span>
-        <br />
-        <span className="text-xl font-bold">Contactez-</span>
-        <span className="text-accent text-xl font-bold"> nous</span>
-        <br />
-        <span className="text-gray-400">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
-          voluptates delectus inventore, placeat est adipisci saepe minus
-          eligendi <br />
-          exercitationem architecto nihil.
-        </span> */}
-      <div className="max-md:hidden bg-[#D8ECFC] rounded-tl-4xl h-52 w-72"></div>
+      <div className="max-lg:hidden bg-[#D8ECFC] rounded-tl-4xl h-52 w-72"></div>
     </div>
   );
 }
