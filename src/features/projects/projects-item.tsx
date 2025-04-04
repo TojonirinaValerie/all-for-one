@@ -21,7 +21,7 @@ const ProjectsItem: React.FC<{ data: ProjectDataType }> = ({ data }) => {
         animate={{ opacity: 1, y: 0 }}
         whileHover={{ opacity: 0, y: -5 }}
         transition={{ duration: 0.3 }}
-        className="absolute p-10  z-50 bg-gradient-to-b from-[#00000000] to-[#000000] h-full flex flex-col justify-end w-full
+        className="absolute p-6  z-50 bg-gradient-to-b from-[#00000000] to-[#000000] h-full flex flex-col justify-end w-full
         max-md:p-4"
       >
         <div className="flex flex-row justify-between items-center w-full">
@@ -51,7 +51,7 @@ const ProjectsItem: React.FC<{ data: ProjectDataType }> = ({ data }) => {
             <ArrowRight size={48} strokeWidth={1.25} color="#FFFFFF" />
           </div>
         </div>
-        <div className="p-4">
+        <div className="">
           <div className="flex flex-row justify-between items-center w-full">
             <h1 className="text-xl  max-2xl:text-lg text-project-card-foreground">
               {title}
@@ -60,7 +60,7 @@ const ProjectsItem: React.FC<{ data: ProjectDataType }> = ({ data }) => {
               Role: Dashboard
             </p>
           </div>
-          <p className="text-project-card-foreground leading-5 text-md max-2xl:text-lg font-[300] max-2xl:leading-6">
+          <p className="text-project-card-foreground leading-5 text-sm max-2xl:text-sm font-[300] max-2xl:leading-6">
             {` Un logiciel equipé d’un dispositif électronique permettant de suivre
             en temps réel les déplacements des agents (coursiers, livreurs, etc)
             d’une entreprise.`}
