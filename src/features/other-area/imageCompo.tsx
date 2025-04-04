@@ -34,7 +34,7 @@ export function ImageCompo({
           width={80}
           height={80}
         />
-        <h1 className="text-xl font-bold text-center text-gray-50 mb-6">
+        <h1 className="text-xl md:text-xl sm:text-sm font-bold text-center text-gray-50 mb-6">
           {title}
         </h1>
         <p className="text-gray-300 text-center">{description}</p>
