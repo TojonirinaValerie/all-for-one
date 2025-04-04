@@ -22,7 +22,7 @@ export const SectionTitleTitle: React.FC<SectionTitleTitleProps> = ({
   align,
 }) => {
   return (
-    <h1 className={`text-xxl font-[800] text-center max-md:text-center ${getTextAlign(align)}`}>
+    <h1 className={`text-xxl font-bold text-center max-md:text-center leading-10 ${getTextAlign(align)}`}>
       {children}
     </h1>
   );
