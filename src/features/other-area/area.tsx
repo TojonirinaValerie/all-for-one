@@ -47,8 +47,8 @@ const expertiseAreas: ExpertiseArea[] = [
 
 export function Area() {
   return (
-    <Section className="bg-[#F5F7F9] text-center py-12 md:py-16">
-      <div className="max-w-4xl mx-auto">
+    <Section className="bg-[#F5F7F9] text-center py-12 md:py-16 ">
+      <div className=" mx-auto">
         <SectionTitle>
           <SectionTitleEng>Other area of expertise</SectionTitleEng>
           <SectionTitleTitle>
