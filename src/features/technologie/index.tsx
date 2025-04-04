@@ -27,23 +27,23 @@ export default function TechnologiaSection() {
             <div className="flex flex-col md:flex-row items-center gap-12 justify-between">
               <div className="w-full md:w-1/2 text-center md:text-left">
                 <motion.h3
-                  className="text-gray-400 uppercase tracking-widest "
+                  className={`text-white/50 tracking-widest max-md:text-center uppercase font-light`}
                   variants={fadeInVariants}
                   custom={0}
                 >
                   Technology
                 </motion.h3>
                 <motion.h2
-                  className="text-white text-xxl font-black mt-2"
+                   className={`text-xxl font-bold  max-md:text-center leading-10 text-white`}
                   variants={fadeInVariants}
                   custom={0.2}
                 >
                   Quelques technologies qui{" "}
-                  <span className="text-red-500">alimenteront</span> vos
+                  <span className="text-accent">alimenteront</span> vos
                   plateformes
                 </motion.h2>
                 <motion.p
-                  className="text-gray-300 mt-4"
+                  className={`text-white mt-2 max-md:text-center font-light`}
                   variants={fadeInVariants}
                   custom={0.4}
                 >

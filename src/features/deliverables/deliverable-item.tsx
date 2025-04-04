@@ -6,9 +6,10 @@ const DeliverableItem: React.FC<{
 }> = ({ data, withMargin }) => {
   const { title, description, icon } = data;
   return (
-    <article className={` ${withMargin ? " pl-10 " : " "} w-full max-lg:pl-0`}>
+    <article className={` ${withMargin ? " pl-10 max-md:pl-4 " : " "} max-lg:mr-0 max-md:px-6`}>
       <div
-        className={`flex flex-col justify-center px-14 py-8 relative w-[524px] h-[180px] rounded-[30px] bg-primary max-xl:max-w-[400px] pr-18`}
+        className={`flex flex-col justify-center px-14 py-8 relative max-w-[524px] min-h-[180px] rounded-[30px] max-xl:max-w-[400px] bg-primary 
+          `}
       >
         <h2 className="text-[#F5FBFF] font-[600]">{title}</h2>
         <p className="text-[#F5FBFF] text-sm font-[300]">{description}</p>
