@@ -2,7 +2,7 @@
 
 import { Section } from "@/components/section";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import TechnologieAnimation from "./components/technologieAnimation";
 
 const fadeInVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -15,13 +15,15 @@ const fadeInVariants = {
 
 export default function TechnologiaSection() {
   return (
-    <section className="bg-[url(/assets/techno/bg-techno.webp)] w-full h-[100%] sm:h-auto md:h-auto bg-no-repeat bg-cover bg-fixed" id="technologie">
+    <section
+      className="bg-[url(/assets/techno/bg-techno.webp)] w-full h-[100%] sm:h-auto md:h-auto bg-no-repeat bg-cover bg-fixed"
+      id="technologie"
+    >
       <motion.div
         className="w-full h-[100%] sm:h-auto md:h-auto"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-       
       >
         <Section>
           <div className="max-w-7xl w-full mx-auto">
@@ -35,7 +37,7 @@ export default function TechnologiaSection() {
                   Technology
                 </motion.h3>
                 <motion.h2
-                   className={`text-xxl font-bold  max-md:text-center leading-10 text-white`}
+                  className={`text-xxl font-bold  max-md:text-center leading-10 text-white`}
                   variants={fadeInVariants}
                   custom={0.2}
                 >
@@ -58,14 +60,7 @@ export default function TechnologiaSection() {
                 variants={fadeInVariants}
                 custom={0.6}
               >
-                <Image
-                  src="/assets/techno/techno.webp"
-                  alt="Technologies"
-                  width={500}
-                  height={300}
-                  className="rounded-lg"
-                  priority
-                />
+                <TechnologieAnimation />
               </motion.div>
             </div>
           </div>
