@@ -46,16 +46,16 @@ export function Footer() {
 
   return (
     <footer className="w-full border-t-2 border-[#F2D6D7] bg-white">
-      <div className="py-16 px-8 pl-0">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-6">
+      <div className="py-16 px-8 ">
+        <div className="grid grid-cols-1 gap-1 md:grid-cols-3 lg:grid-cols-6">
           <div className="space-y-1">
-            <div className="flex items-start lg:justify-center">
+            <div className="flex items-start lg:justify-start justify-center">
               <Image
                 src="/assets/logo.webp"
                 alt="AllForOne Logo"
                 width={121}
                 height={107}
-                className="h-28 w-28"
+                className="h-40 w-40 "
               />
             </div>
           </div>

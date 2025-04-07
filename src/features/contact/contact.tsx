@@ -8,7 +8,7 @@ import TextContact from "./textContact";
 export function Contact() {
   return (
     <Section className="w-full flex flex-row justify-center">
-      <div className="max-w-7xl">
+      <div className="max-w-[1450px]">
         <TextContact />
         <SecondBlock />
         <MapBlock />
