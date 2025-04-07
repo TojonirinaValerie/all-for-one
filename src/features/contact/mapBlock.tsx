@@ -1,7 +1,7 @@
 "use client";
 const MapBlock = () => {
   return (
-    <div className="w-full py-5">
+    <div className="w-full py-20 ">
       <iframe
         width="100%"
         style={{ margin: "auto", borderRadius: "5px" }}
