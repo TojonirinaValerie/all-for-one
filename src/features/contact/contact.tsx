@@ -1,6 +1,6 @@
 "use client";
 
-import { Section } from "@/components/section";
+import { Section } from "../../components/section";
 import MapBlock from "./mapBlock";
 import { SecondBlock } from "./secontBlock";
 import TextContact from "./textContact";
