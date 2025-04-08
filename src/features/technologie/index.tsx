@@ -56,7 +56,7 @@ export default function TechnologiaSection() {
               </div>
 
               <motion.div
-                className="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0"
+                className="w-full md:w-1/2  flex justify-center md:justify-end mt-6 md:mt-0"
                 variants={fadeInVariants}
                 custom={0.6}
               >
