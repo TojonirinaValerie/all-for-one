@@ -129,7 +129,7 @@ const TechnologieAnimation: FC = () => {
       <>
         <div className="w-full h-full hidden md:flex justify-center items-center">
           <svg
-            className="overflow-visible w-full"
+            className="overflow-visible md:h-[calc(100vh-80px)] py-2"
             viewBox="0 0 521 702"
             fill="none"
             xmlns={ns}
