@@ -46,7 +46,7 @@ export function Footer() {
 
   return (
     <footer className="w-full border-t-2 border-[#F2D6D7] bg-white">
-      <div className="py-16 px-8 ">
+      <div className="py-16 px-4 ">
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
           <div className="space-y-1">
             <div className="flex items-start lg:justify-start justify-center">
@@ -166,7 +166,7 @@ export function Footer() {
       </div>
 
       <div className="w-full border-t border-gray-200 bg-[#E6F3FF] py-4 px-16">
-        <div className="text-sm text-gray-600 flex flex-col md:flex-row justify-between items-center">
+        <div className="text-sm text-gray-600 flex flex-col md:flex-row justify-between  items-center">
           <p>© Allforone 2025 - Tous droits réservés</p>
           <p>Crée et développé par Allforone</p>
         </div>
