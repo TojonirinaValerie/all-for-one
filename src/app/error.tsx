@@ -1,7 +1,7 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import { ChevronLeft, ShieldAlert } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { Button } from "../components/ui/button";
 
 const GlobalErrorPage = () => {
   const router = useRouter();

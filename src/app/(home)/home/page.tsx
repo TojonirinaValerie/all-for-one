@@ -1,5 +1,3 @@
-import ChooseUs from "@/features/choise-us/choose-us";
-import { Contact } from "@/features/contact/contact";
 import Deliverables from "@/features/deliverables/deliverables";
 import { Hero } from "@/features/hero/hero";
 import { Area } from "@/features/other-area/area";
@@ -9,6 +7,8 @@ import TechnologiaSection from "@/features/technologie";
 import TestimonialSection from "@/features/testimoniales";
 import Workflow from "@/features/workflow/woorkflow";
 import { Fragment } from "react";
+import ChooseUs from "../../../features/choise-us/choose-us";
+import { Contact } from "../../../features/contact/contact";
 
 function HomePage() {
   return (

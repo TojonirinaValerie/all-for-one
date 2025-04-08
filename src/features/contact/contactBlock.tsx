@@ -1,15 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { ToastAction } from "@/components/ui/toast";
 import axios from "@/lib/axios";
@@ -18,6 +8,16 @@ import { useMutation } from "@tanstack/react-query";
 import { MapPin, MessageCircle, Phone, Send } from "lucide-react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import { Button } from "../../components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "../../components/ui/form";
+import { Input } from "../../components/ui/input";
 import { useToast } from "../hooks/use-toast";
 
 export function ContactBlock() {
