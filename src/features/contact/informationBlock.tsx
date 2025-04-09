@@ -8,9 +8,10 @@ export function InfoBlock() {
           <Mail className="h-10 w-10" />
           contact@allforone.mg
         </div>
-        <div className="flex gap-7 text-white font-light">
+        <div className="flex gap-7 text-white font-light items-center">
           <Phone className="h-10 w-10" />
-          contact@allforone.mg
+          +261 34 52 103 85<br/>
+          +261 34 22 386 45
         </div>
         <div className="flex gap-7 text-white font-light">
           <MapPin className="h-11 w-11 " />
