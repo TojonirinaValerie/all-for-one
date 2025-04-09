@@ -16,14 +16,14 @@ interface ExpertiseArea {
 
 const expertiseAreas: ExpertiseArea[] = [
   {
-    bgImage: "/assets/area/Frame_154.png",
+    bgImage: "/assets/area/Frame_155.png",
     title: "INTELLIGENCE ARTIFICIELLE",
     description:
       "Les projets seront conçus dans l'optique d'être accessible et agréable pour les utilisateurs.",
     imgLink: "/assets/area/Frame.svg",
   },
   {
-    bgImage: "/assets/area/Frame_155.png",
+    bgImage: "/assets/area/Frame_154.png",
     title: "MULTIMEDIA",
     description:
       "Les projets seront conçus dans l'optique d'être accessible et agréable pour les utilisateurs.",
