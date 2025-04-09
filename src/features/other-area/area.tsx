@@ -62,7 +62,7 @@ export function Area() {
           </SectionTitleDescription>
         </SectionTitle>
       </div>
-      <div className="mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-4  max-w-8xl px-4">
+      <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4  max-w-8xl px-4">
         {expertiseAreas.map((area) => (
           <div key={area.title} className="flex justify-center">
             <ImageCompo {...area} />
