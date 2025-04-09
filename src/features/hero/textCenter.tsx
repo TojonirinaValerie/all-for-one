@@ -51,11 +51,11 @@ export function TextCenter() {
         </button>
 
         <button
-          className={`${STYLES.buttonCommon} ${STYLES.quoteButton} cursor-pointer`}
+          className={`${STYLES.buttonCommon} ${STYLES.quoteButton} bg-transparent cursor-pointer`}
           aria-label="Obtenir un devis"
         >
           <span className="text-center">Obtenir un Devis</span>
-          <span className="w-0 opacity-0 group-hover:block group-hover:w-12 group-hover:opacity-100 transition-all duration-700 transform group-hover:translate-x-2 ease-in-out">
+          <span className="w-0 opacity-0 group-hover:block group-hover:w-12  group-hover:opacity-100 transition-all duration-700 hover:bg-transparent transform group-hover:translate-x-2 ease-in-out">
             <ArrowRight size={28} />
           </span>
         </button>

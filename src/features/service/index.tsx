@@ -70,7 +70,7 @@ const cardVariants = {
       type: "spring",
       damping: 12,
       stiffness: 100,
-      duration: 0.8,
+      duration: 0.6,
     },
   },
 };
