@@ -13,12 +13,14 @@ export function Footer() {
   ];
 
   const services = [
-    "Électronique Embarquée",
     "Application Web",
     "UI/UX Design",
-    "Application Desktop",
-    "Application Mobile",
-    "Développement IoT",
+    "Application Desktop & Mobile",
+    "Intelligence Artificielle",
+    "Admin Système et Réseau ",
+    "Multimedia",
+    "Eléctronique Embarquée",
+    "Formation",
   ];
 
   const socialLinks = [
@@ -46,16 +48,16 @@ export function Footer() {
 
   return (
     <footer className="w-full border-t-2 border-[#F2D6D7] bg-white">
-      <div className="py-16 px-4 ">
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+      <div className="py-10 px-8 lg:px-48">
+        <div className="grid grid-cols-1  gap-6 md:grid-cols-3 lg:grid-cols-6">
           <div className="space-y-1">
-            <div className="flex items-start lg:justify-start justify-center">
+            <div className="flex items-start lg:justify-start justify-start">
               <Image
                 src="/assets/logo.webp"
                 alt="AllForOne Logo"
                 width={121}
                 height={107}
-                className="h-40 w-40 "
+                className="h-40 w-40 object-contain "
               />
             </div>
           </div>
