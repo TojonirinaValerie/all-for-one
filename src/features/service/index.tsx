@@ -88,8 +88,7 @@ export default function ServicesSection() {
           <SectionTitle>
             <SectionTitleEng>OUR SERVICE</SectionTitleEng>
             <SectionTitleTitle>
-              Nos{" "}
-              <SectionTitleAccent>Services </SectionTitleAccent>
+              Nos <SectionTitleAccent>Services </SectionTitleAccent>
             </SectionTitleTitle>
             <SectionTitleDescription>
               Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
@@ -138,7 +137,7 @@ export default function ServicesSection() {
                   <div className="mt-auto opacity-0 group-hover:opacity-100 translate-y-10 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
                     <Button
                       variant="outline"
-                      className="bg-white text-[#314968] hover:bg-slate-100 border-none w-36 h-16 rounded-2xl font-semibold text-sm transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:scale-100"
+                      className="bg-white text-[#314968] hover:bg-slate-100 border-none w-28 h-14 rounded-2xl font-semibold text-sm transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:scale-100"
                     >
                       Découvrir
                     </Button>
