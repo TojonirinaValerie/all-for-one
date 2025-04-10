@@ -66,12 +66,12 @@ const Projects = () => {
             <ProjectsItem key={`${index}-${item.title}`} data={item} />
           ))}
         </div>
-        <button className="mt-6 border bg-transparent cursor-pointer border-primary hover:bg-transparent px-12 py-3 text-primary  rounded-4xl not-2xl:h-12 not-lg:w-80 group relative flex items-center justify-center xl:mx-auto">
+        {/* <button className="mt-6 border bg-transparent cursor-pointer border-primary hover:bg-transparent px-12 py-3 text-primary  rounded-4xl not-2xl:h-12 not-lg:w-80 group relative flex items-center justify-center xl:mx-auto">
           <div className="text-center">Voir plus</div>
           <div className="w-0 opacity-0 group-hover:block group-hover:w-12 group-hover:opacity-100 transition-all duration-700 transform group-hover:translate-x-2 ease-in-out">
             <ArrowRight size={24} />
           </div>
-        </button>
+        </button> */}
       </div>
     </Section>
   );
