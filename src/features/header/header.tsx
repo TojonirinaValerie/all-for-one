@@ -1,13 +1,20 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react"; // Icônes pour le menu
+import { Menu} from "lucide-react";
 import Image from "next/image";
 import { MenuHeader } from "./menu";
 import { usePathname } from "next/navigation";
 
+// ShadCN UI components
+import {
+  Drawer,
+  DrawerContent,
+  DrawerTrigger,
+} from "@/components/ui/drawer"; // Adjust path if needed
+import { DialogTitle } from "@radix-ui/react-dialog";
+
 export default function Header() {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>("");
   const pathname = usePathname();
 
@@ -18,17 +25,20 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
-      let currentSection = activeSection; // Garder la dernière valeur si aucune section n'est valide
+      let currentSection = activeSection;
 
       sections.forEach((section) => {
         const sectionId = section.getAttribute("id");
-        if (!sectionId) return; // Ignorer les sections sans ID
+        if (!sectionId) return;
 
-        const sectionTop = section.offsetTop - 120; // Ajuste pour tenir compte du header
+        const sectionTop = section.offsetTop - 120;
         const sectionHeight = section.clientHeight;
 
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-          currentSection = sectionId; // Mettre à jour uniquement si la section a un ID
+        if (
+          window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + sectionHeight
+        ) {
+          currentSection = sectionId;
         }
       });
 
@@ -38,43 +48,77 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [activeSection]);
-  // Fonction pour fermer le menu mobile lorsqu'on clique sur un lien
-  const handleMenuClick = () => {
-    setIsOpen(false);
-  };
+
+  const menuItems = [
+    { id: "accueil", link: "#accueil", title: "Accueil" },
+    { id: "services", link: "#services", title: "Services" },
+    { id: "projects", link: "#projects", title: "Projets" },
+    { id: "technologie", link: "#technologie", title: "Technologies" },
+    { id: "contact", link: "#contact", title: "Contact" },
+  ];
 
   return (
     <header className="bg-[#dce4ef98] shadow-md fixed w-full backdrop-blur-lg z-[100]">
       <div className="h-[60px] md:h-[80px] px-6 xl:px-48 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Image src="/assets/AfoLogoMobile.webp" alt="Logo Mobile" width={60} height={60} className="lg:block" />
-          <Image src="/assets/AfoLogoDesk.webp" alt="Logo Desktop" width={120} height={40} className="not-lg:hidden" />
+          <Image
+            src="/assets/AfoLogoMobile.webp"
+            alt="Logo Mobile"
+            width={60}
+            height={60}
+            className="lg:block"
+          />
+          <Image
+            src="/assets/AfoLogoDesk.webp"
+            alt="Logo Desktop"
+            width={120}
+            height={40}
+            className="not-lg:hidden"
+          />
         </div>
 
+        {/* Desktop nav */}
         <nav className="hidden md:flex xl:gap-6 not-xl:gap-2 h-full">
-          <MenuHeader active={activeSection === "accueil"} link="#accueil" title="Accueil" />
-          <MenuHeader active={activeSection === "services"} link="#services" title="Services" />
-          <MenuHeader active={activeSection === "projects"} link="#projects" title="Projets" />
-          <MenuHeader active={activeSection === "technologie"} link="#technologie" title="Technologies" />
-          <MenuHeader active={activeSection === "contact"} link="#contact" title="Contact" />
+          {menuItems.map((item) => (
+            <MenuHeader
+              key={item.id}
+              active={activeSection === item.id}
+              link={item.link}
+              title={item.title}
+            />
+          ))}
         </nav>
 
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={32} /> : <Menu size={32} />}
-        </button>
-      </div>
+        {/* Mobile drawer trigger */}
+        <div className="md:hidden">
+          <Drawer>
+            <DrawerTrigger asChild>
+              <button>
+                <Menu size={32} />
+              </button>
+            </DrawerTrigger>
+            <DrawerContent side="left" className="pt-[80px]">
+              <DialogTitle>
 
-      {isOpen && (
-        <div className="md:hidden bg-[#DCE4EF] absolute top-[60px] backdrop-blur-lg left-0 w-full shadow-lg z-50">
-          <nav className="flex flex-col items-center gap-4 py-6">
-            <MenuHeader active={activeSection === "accueil"} link="#accueil" title="Accueil" onClick={handleMenuClick} />
-            <MenuHeader active={activeSection === "services"} link="#services" title="Services" onClick={handleMenuClick} />
-            <MenuHeader active={activeSection === "projects"} link="#projects" title="Projets" onClick={handleMenuClick} />
-            <MenuHeader active={activeSection === "technologie"} link="#technologie" title="Technologies" onClick={handleMenuClick} />
-            <MenuHeader active={activeSection === "contact"} link="#contact" title="Contact" onClick={handleMenuClick} />
-          </nav>
+              </DialogTitle>
+              <nav className="flex flex-col items-start gap-4 px-10">
+                {menuItems.map((item) => (
+                  <MenuHeader
+                    key={item.id}
+                    active={activeSection === item.id}
+                    link={item.link}
+                    title={item.title}
+                    onClick={() => {
+                      const drawer = document.activeElement as HTMLElement;
+                      drawer?.blur();
+                    }}
+                  />
+                ))}
+              </nav>
+            </DrawerContent>
+          </Drawer>
         </div>
-      )}
+      </div>
     </header>
   );
 }

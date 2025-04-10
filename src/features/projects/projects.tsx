@@ -7,7 +7,7 @@ import SectionTitle, {
   SectionTitleEng,
   SectionTitleTitle,
 } from "@/components/section-title";
-import { ArrowRight } from "lucide-react";
+// import { ArrowRight } from "lucide-react";
 import ProjectsItem from "./projects-item";
 
 export type ProjectDataType = {
