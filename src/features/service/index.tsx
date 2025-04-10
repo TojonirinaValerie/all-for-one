@@ -70,7 +70,7 @@ const cardVariants = {
       type: "spring",
       damping: 12,
       stiffness: 100,
-      duration: 0.8,
+      duration: 0.6,
     },
   },
 };
@@ -82,19 +82,18 @@ export default function ServicesSection() {
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6 }}
         >
           <SectionTitle>
             <SectionTitleEng>OUR SERVICE</SectionTitleEng>
             <SectionTitleTitle>
-              Nos{" "}
-              <SectionTitleAccent>Services </SectionTitleAccent>
+              Nos <SectionTitleAccent>Services </SectionTitleAccent>
             </SectionTitleTitle>
             <SectionTitleDescription>
               Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
-              feugiat pretium velit ac scelerisque. In vitae ligula eget ligula
-              pulvinar rutrum convallis id.
+              feugiat pretium velit ac scelerisque.
             </SectionTitleDescription>
           </SectionTitle>
         </motion.div>
@@ -103,7 +102,8 @@ export default function ServicesSection() {
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
         >
           {servicesData.map((service, index) => (
             <motion.div
@@ -129,16 +129,14 @@ export default function ServicesSection() {
                     <h3 className="text-2xl font-bold mb-4 transition-all duration-300 group-hover:text-3xl">
                       {service.title}
                     </h3>
-
                     <p className="text-slate-300 mb-6 max-w-[400px] line-clamp-4 text-sm font-semibold transition-all duration-300 group-hover:text-md">
                       {service.description}
                     </p>
                   </div>
-
                   <div className="mt-auto opacity-0 group-hover:opacity-100 translate-y-10 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
                     <Button
                       variant="outline"
-                      className="bg-white text-[#314968] hover:bg-slate-100 border-none w-36 h-16 rounded-2xl font-semibold text-sm transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:scale-100"
+                      className="bg-white text-[#314968] hover:bg-slate-100 border-none w-28 h-14 rounded-2xl font-semibold text-sm transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:scale-100"
                     >
                       Découvrir
                     </Button>
