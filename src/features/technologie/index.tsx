@@ -50,8 +50,9 @@ export default function TechnologiaSection() {
                   variants={fadeInVariants}
                   custom={0.4}
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum feugiat pretium velit ac scelerisque.
+                  Les technologies que nous utilisons garantissent des
+                  plateformes performantes, évolutives et sécurisées, adaptées à
+                  vos besoins spécifiques et aux défis de demain
                 </motion.p>
               </div>
 

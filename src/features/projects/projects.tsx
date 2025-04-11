@@ -50,9 +50,9 @@ const Projects = () => {
             Nos <SectionTitleAccent>Projets </SectionTitleAccent>
           </SectionTitleTitle>
           <SectionTitleDescription>
-            Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
-            feugiat pretium velit ac scelerisque. In vitae ligula eget ligula
-            pulvinar rutrum convallis id.
+            Explorez nos projets réalisés, mettant en avant notre expertise,
+            créativité et capacité à transformer vos idées en solutions
+            concrètes et efficaces.
           </SectionTitleDescription>
         </SectionTitle>
         <div

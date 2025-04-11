@@ -25,7 +25,7 @@ const workflowData: DataSectionType[] = [
     title: "Qualité",
     description:
       "Chaque projet est le fruit d'un savoir-faire excellente et d'un contrôle qualité rigoureux.",
-    icon: <ShieldCheck  color="#02385A" />,
+    icon: <ShieldCheck color="#02385A" />,
   },
   {
     title: "Sur-mesure",
@@ -85,9 +85,9 @@ const Deliverables = () => {
                 <SectionTitleAccent>livrables </SectionTitleAccent>
               </SectionTitleTitle>
               <SectionTitleDescription align="left">
-                Lorem ipsum dolor a amet, consectetur adipiscing elit.
-                Vestibulum feugiat pretium velit ac scelerisque. In vitae ligula
-                eget ligula pulvinar rutrum convallis id.
+                Nous mettons à votre disposition des solutions adaptées, faciles
+                à utiliser et de qualité, qui répondent précisément à vos
+                besoins
               </SectionTitleDescription>
             </SectionTitle>
           </motion.div>

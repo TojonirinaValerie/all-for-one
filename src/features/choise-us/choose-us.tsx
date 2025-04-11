@@ -52,9 +52,9 @@ const ChooseUs = () => {
             Pourquoi nous <SectionTitleAccent>choisir</SectionTitleAccent> ?
           </SectionTitleTitle>
           <SectionTitleDescription>
-            Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
-            feugiat pretium velit ac scelerisque. <br />
-            In vitae ligula eget ligula pulvinar rutrum convallis id.{" "}
+            Choisir la bonne équipe est essentiel. Découvrez pourquoi notre
+            expertise, notre engagement et nos innovations digitales font toute
+            la différence.
           </SectionTitleDescription>
         </SectionTitle>
         <div

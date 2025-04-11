@@ -293,8 +293,8 @@ export default function TestimonialSection() {
                     <SectionTitleAccent>pense de nous</SectionTitleAccent>
                   </SectionTitleTitle>
                   <SectionTitleDescription align="left">
-                    Lorem ipsum dolor a amet, consectetur adipiscing elit.
-                    Vestibulum feugiat pretium velit ac scelerisque.
+                    Découvrez les témoignages de nos clients et comment notre
+                    expertise a joué un rôle clé dans leur réussite
                   </SectionTitleDescription>
                 </SectionTitle>
               </div>

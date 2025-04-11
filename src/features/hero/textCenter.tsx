@@ -36,11 +36,9 @@ export function TextCenter() {
       </span>{" "}
       <br />
       <span className="font-light not-2xl:text-sm">
-        {`Nous vous donnons la technologie nécessaire pour améliorer la
-        productivité,`}
-        <br />{" "}
-        {`la sécurité, et l'excellence opérationnelle globale dans votre
-        projet.`}
+        Nous mettons en œuvre les technologies adaptées pour booster la
+        productivité, <br />
+        renforcer la sécurité et optimiser vos opérations quotidiennes.
       </span>
       <div className={STYLES.buttonContainer}>
         <button

@@ -139,7 +139,7 @@ export function Footer() {
         <div className="flex flex-col gap-4">
           <h3 className="text-md font-semibold text-[#023759]">Newsletter</h3>
           <p className="text-sm text-[#396CAA]">
-            Restez informé de nos dernières actualités
+            Restez à jour avec nos dernières actualités.
           </p>
           <div className="relative flex max-w-md">
             <Input

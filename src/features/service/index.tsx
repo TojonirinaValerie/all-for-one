@@ -92,8 +92,9 @@ export default function ServicesSection() {
               Nos <SectionTitleAccent>Services </SectionTitleAccent>
             </SectionTitleTitle>
             <SectionTitleDescription>
-              Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
-              feugiat pretium velit ac scelerisque.
+              Explorez nos prestations conçues pour satisfaire vos besoins,
+              transformer vos idées en réalisations concrètes et maximiser
+              l&apos;impact de votre projet
             </SectionTitleDescription>
           </SectionTitle>
         </motion.div>
