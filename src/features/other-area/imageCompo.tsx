@@ -14,7 +14,7 @@ export function ImageCompo({
   bgImage,
 }: Readonly<ImageCompoProps>) {
   return (
-    <div className="group min-h-[400px] w-[330px] 2xl:h-[480px] 2xl:w-[430px] rounded-2xl bg-gray-400 overflow-hidden relative">
+    <div className="group h-[400px] w-[330px] 2xl:h-[480px] 2xl:w-[430px] rounded-2xl bg-gray-400 overflow-hidden relative">
       <Image
         className="absolute inset-0 w-full h-full object-cover z-0"
         src={bgImage}
