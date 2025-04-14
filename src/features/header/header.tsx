@@ -112,7 +112,7 @@ export default function Header() {
                 {isDrawerOpen ? <X size={32} /> : <Menu size={32} />}
               </button>
             </DrawerTrigger>
-            <DrawerContent side="left" className="pt-[80px] z-100">
+            <DrawerContent side="left" className="pt-[80px] z-100 bg-[#EEF2F7]">
               <DialogTitle></DialogTitle>
               <nav className="flex flex-col items-start gap-4 px-0">
                 {menuItems.map((item) => (

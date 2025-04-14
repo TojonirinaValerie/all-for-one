@@ -17,6 +17,7 @@ export function MenuHeader({title, link, active , onClick}:MenuHeaderProps){
       px-4 md:px-5
       py-2 md:py-0
       max-md:px-7
+      
       text-sm sm:text-base lg:text-[15px] xl:text-[16px] 2xl:text-md
       font-medium
       text-primary
@@ -24,7 +25,7 @@ export function MenuHeader({title, link, active , onClick}:MenuHeaderProps){
       hover:border-b-2
       border-b-primary
       transition-all duration-150
-      ${active ? "font-semibold border-b-2" : "font-light border-b-0"}
+      ${active ? "font-semibold border-b-2 max-md:border-b-0 max-md:font-bold " : "font-light border-b-0"}
       flex items-center md:justify-center
     `}
   >
