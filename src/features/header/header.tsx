@@ -35,7 +35,7 @@ export default function Header() {
     });
 
     setActiveSection(currentSection);
-  }, [pathname]);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {

@@ -24,7 +24,7 @@ const ProjectsData: ProjectDataType[] = [
       "Un portail web pour le réseau de la Diaspora Malagasy afin de favoriser la collaboration, l'entraide et le partage d'expériences et d'opportunités entre les Malgaches dispersés à travers le monde.",
     date: "2025",
     type: "Portail web",
-    image: "/assets/project1.png",
+    image: "/assets/diaspora.webp",
   },
   {
     title: "KayKeny",
@@ -39,14 +39,14 @@ const ProjectsData: ProjectDataType[] = [
     description: "Une application web créée pour l'entreprise \"GemLab Consulting\" pour gérer ses activités et son processus de fonctionnement (clients, factures, certificats,etc.).",
     date: "2024",
     type: "Application web",
-    image: "/assets/project3.png",
+    image: "/assets/glc.webp",
   },
   {
     title: "AtariaTech",
     description: "Un site e-commerce  développé pour \"Ataria Tech\" permettant la vente de matériel informatique. Il offre un catalogue dynamique et intuitive pour simplifier les achats des clients",
     date: "2025",
     type: "Site e-commerce",
-    image: "/assets/project4.png",
+    image: "/assets/ataria.webp",
   },
 ];
 const Projects = () => {

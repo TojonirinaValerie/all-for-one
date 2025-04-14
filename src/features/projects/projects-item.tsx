@@ -33,9 +33,9 @@ const ProjectsItem: React.FC<{ data: ProjectDataType }> = ({ data }) => {
       <Image
         src={image}
         alt=""
-        width={800}
-        height={800}
-        className="absolute w-full object-cover"
+        width={1200}
+        height={1200}
+        className="absolute w-full h-full object-cover"
       />
       <motion.div
         initial={{ opacity: 1, y: 10 }}
