@@ -16,7 +16,25 @@ export default function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    console.log(pathname);
+    const sections = document.querySelectorAll("section");
+    let currentSection = activeSection;
+
+    sections.forEach((section) => {
+      const sectionId = section.getAttribute("id");
+      if (!sectionId) return;
+
+      const sectionTop = section.offsetTop - 120;
+      const sectionHeight = section.clientHeight;
+
+      if (
+        window.scrollY >= sectionTop &&
+        window.scrollY < sectionTop + sectionHeight
+      ) {
+        currentSection = sectionId;
+      }
+    });
+
+    setActiveSection(currentSection);
   }, [pathname]);
 
   useEffect(() => {
@@ -59,7 +77,7 @@ export default function Header() {
       <div className="h-[60px] md:h-[80px] px-6 xl:px-48 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Image
-            src="/assets/AfoLogoMobile.webp"
+            src="/assets/AFO_Logo.png"
             alt="Logo Mobile"
             width={60}
             height={60}
@@ -96,7 +114,7 @@ export default function Header() {
             </DrawerTrigger>
             <DrawerContent side="left" className="pt-[80px] z-100">
               <DialogTitle></DialogTitle>
-              <nav className="flex flex-col items-start gap-4 px-4">
+              <nav className="flex flex-col items-start gap-4 px-0">
                 {menuItems.map((item) => (
                   <MenuHeader
                     key={item.id}
@@ -106,7 +124,7 @@ export default function Header() {
                     onClick={() => {
                       const drawer = document.activeElement as HTMLElement;
                       drawer?.blur();
-                      setIsDrawerOpen(false); 
+                      setIsDrawerOpen(false);
                     }}
                   />
                 ))}
