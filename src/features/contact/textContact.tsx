@@ -15,9 +15,8 @@ export default function TextContact() {
             Contactez- <SectionTitleAccent>nous</SectionTitleAccent>
           </SectionTitleTitle>
           <SectionTitleDescription align="left">
-            N&apos;hésitez pas à nous contacter pour discuter de vos projets.{" "}
-            <br />
-            Vous pouvez également demander un devis <br />
+            N&apos;hésitez pas à nous contacter pour discuter de vos projets.
+            Vous pouvez également demander un devis
             personnalisé pour des solutions sur mesure
           </SectionTitleDescription>
         </SectionTitle>
