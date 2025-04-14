@@ -46,11 +46,11 @@ const ProjectsItem: React.FC<{ data: ProjectDataType }> = ({ data }) => {
             2024
           </p>
         </div>
-        <div className="flex flex-row justify-center">
+        {/* <div className="flex flex-row justify-center">
           <div className="p-6 border-[#FAECEB] border-[2px] rounded-full hover:-rotate-45 cursor-pointer transition">
             <ArrowRight size={48} strokeWidth={1.25} color="#FFFFFF" />
           </div>
-        </div>
+        </div> */}
         <div className="">
           <div className="flex flex-row justify-between items-center w-full">
             <h1 className="text-xl  max-2xl:text-lg text-project-card-foreground">

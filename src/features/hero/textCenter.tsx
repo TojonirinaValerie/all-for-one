@@ -32,7 +32,7 @@ export function TextCenter() {
         DE VOS{" "}
       </span>
       <span className="text-accent 2xl:text-xxxl text-3xl font-bold">
-        PRODUITS DIGITAUX
+        SOLUTIONS NUMERIQUES
       </span>{" "}
       <br />
       <span className="font-light not-2xl:text-sm">

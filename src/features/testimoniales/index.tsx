@@ -311,7 +311,7 @@ export default function TestimonialSection() {
                 </Button>
               </div>
             </div>
-            {/* <div>
+            <div>
               <Carousel
                 opts={{ align: "center", loop: false }}
                 orientation="vertical"
@@ -334,7 +334,7 @@ export default function TestimonialSection() {
                   <ChevronDown className="h-4 w-4" />
                 </CarouselNext>
               </Carousel>
-            </div> */}
+            </div>
           </div>
         </div>
       </Section>

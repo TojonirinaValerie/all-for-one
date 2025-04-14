@@ -23,7 +23,7 @@ function HomePage() {
       </div>
       <Projects />
       <TechnologiaSection />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       <Contact />
     </Fragment>
   );
