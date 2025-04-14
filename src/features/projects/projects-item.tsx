@@ -1,14 +1,21 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 // import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { ProjectDataType } from "./projects";
+import { useRef } from "react";
 
 const ProjectsItem: React.FC<{ data: ProjectDataType }> = ({ data }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.5 });
+
   const { title, image } = data;
   return (
-    <article className="w-full rounded-[40px] aspect-[791/618] relative flex flex-col justify-end overflow-hidden">
+    <article
+      className="w-full rounded-[40px] aspect-[791/618] relative flex flex-col justify-end overflow-hidden"
+      ref={ref}
+    >
       <Image
         src={image}
         alt=""
