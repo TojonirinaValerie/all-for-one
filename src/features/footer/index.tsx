@@ -23,22 +23,22 @@ export function Footer() {
 
   const socialLinks = [
     {
-      href: "https://facebook.com/allforone",
+      href: "https://www.facebook.com/profile.php?id=61565939655126",
       src: "/assets/facebook.svg",
       alt: "Facebook",
     },
     {
-      href: "https://linkedin.com/company/allforone",
+      href: "https://www.linkedin.com/company/allforonemg/posts/?feedView=all",
       src: "/assets/linkedin.svg",
       alt: "LinkedIn",
     },
     {
-      href: "https://discord.gg/allforone",
+      href: "https://discord.gg/7NZBZ97e2W",
       src: "/assets/discord.svg",
       alt: "Discord",
     },
     {
-      href: "https://wa.me/261383877407",
+      href: "https://wa.me/+261345210385",
       src: "/assets/whatsapp.svg",
       alt: "WhatsApp",
     },
@@ -92,6 +92,7 @@ export function Footer() {
               <a
                 key={link.alt}
                 href={link.href}
+                target="_blank"
                 className="rounded-2xl bg-white p-0 shadow-md hover:shadow-lg transition-all"
               >
                 <Image
