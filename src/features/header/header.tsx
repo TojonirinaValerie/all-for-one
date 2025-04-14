@@ -1,22 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu} from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { MenuHeader } from "./menu";
 import { usePathname } from "next/navigation";
 
 // ShadCN UI components
-import {
-  Drawer,
-  DrawerContent,
-  DrawerTrigger,
-} from "@/components/ui/drawer"; // Adjust path if needed
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer"; // Adjust path if needed
 import { DialogTitle } from "@radix-ui/react-dialog";
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState<string>("");
   const pathname = usePathname();
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
 
   useEffect(() => {
     console.log(pathname);
@@ -91,17 +88,15 @@ export default function Header() {
 
         {/* Mobile drawer trigger */}
         <div className="md:hidden">
-          <Drawer>
+          <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
             <DrawerTrigger asChild>
               <button>
-                <Menu size={32} />
+                {isDrawerOpen ? <X size={32} /> : <Menu size={32} />}
               </button>
             </DrawerTrigger>
-            <DrawerContent side="left" className="pt-[80px]">
-              <DialogTitle>
-
-              </DialogTitle>
-              <nav className="flex flex-col items-start gap-4 px-10">
+            <DrawerContent side="left" className="pt-[80px] z-100">
+              <DialogTitle></DialogTitle>
+              <nav className="flex flex-col items-start gap-4 px-4">
                 {menuItems.map((item) => (
                   <MenuHeader
                     key={item.id}
@@ -111,6 +106,7 @@ export default function Header() {
                     onClick={() => {
                       const drawer = document.activeElement as HTMLElement;
                       drawer?.blur();
+                      setIsDrawerOpen(false); 
                     }}
                   />
                 ))}

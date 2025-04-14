@@ -17,7 +17,7 @@ const DrawerContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        "fixed z-50 bg-white w-64 h-full shadow-xl ease-in-out transition-transform duration-300",
+        "fixed z-50 bg-white w-48 h-full shadow-xl ease-in-out transition-transform duration-300",
         {
           "left-0 top-0": side === "left",
           "right-0 top-0": side === "right",
