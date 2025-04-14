@@ -145,11 +145,12 @@ export function Footer() {
             <Input
               type="email"
               placeholder="email"
-              className="rounded-full h-12 text-gray-600 border-r-0 bg-[#E0E7E9]"
+              className="rounded-full h-12 text-gray-600 border-r-0 bg-[#B3D1D825] border-[#FFFFFF]/20 placeholder:text-[#35414B]/40"
             />
             <button
               type="submit"
-              className="rounded-full h-12 w-12 bg-red-500 hover:bg-red-600 flex items-center justify-center absolute right-0"
+              className="rounded-full h-14 w-14 bg-[#DA4338] hover:bg-[#DA4338]/80 flex items-center justify-center absolute top-[-4px] right-0
+              border-[3px] border-[#FFFFFF]/20"
             >
               <Send className="h-5 w-5 text-white" />
             </button>

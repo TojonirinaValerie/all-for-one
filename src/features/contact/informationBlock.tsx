@@ -6,11 +6,11 @@ export function InfoBlock() {
     max-md:rounded-r-4xl max-md:rounded-4xl">
       <div className="flex flex-col gap-7 h-full justify-center items-start">
         <div className="flex flex-row gap-7 text-white font-light items-center">
-          <Mail className="h-8 w-8" />
+          <Mail className="min-h-8 min-w-8 max-h-8 max-w-8" />
           <p className="text-md">contact@allforone.mg</p>
         </div>
         <div className="flex flex-row gap-7 text-white font-light items-center">
-          <Phone className="h-8 w8" />
+          <Phone className="min-h-8 min-w-8 max-h-8 max-w-8" />
           <p className="text-md">
             +261 34 52 103 85
             <br />
@@ -18,11 +18,11 @@ export function InfoBlock() {
           </p>
         </div>
         <div className="flex flex-row gap-7 text-white font-light items-center">
-          <MapPin className="h-8 w-8 " />
+          <MapPin className="min-h-10 min-w-10 max-h-8 max-w-8 " />
           <p className="text-md">Ambatoroka, Antananarivo, Madagascar</p>
         </div>
         <div className="flex flex-row gap-7 text-white font-light items-center">
-          <Clock className="h-8 w-8" />
+          <Clock className="min-h-8 min-w-8 max-h-8 max-w-8" />
           <p className="text-md">
             08 : 30 - 16 : 30 <br />
             08 : 30 - 16 : 30
