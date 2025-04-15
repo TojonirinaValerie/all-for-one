@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { MenuHeader } from "./menu";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 
 // ShadCN UI components
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer"; // Adjust path if needed
@@ -12,7 +12,7 @@ import { DialogTitle } from "@radix-ui/react-dialog";
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState<string>("");
-  const pathname = usePathname();
+  // const pathname = usePathname();
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
 
   useEffect(() => {

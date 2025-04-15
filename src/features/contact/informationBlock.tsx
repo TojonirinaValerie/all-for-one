@@ -1,4 +1,4 @@
-import { Calendar, Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 
 export function InfoBlock() {
   return (

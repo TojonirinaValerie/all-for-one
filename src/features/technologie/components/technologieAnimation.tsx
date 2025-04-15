@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const ns = "http://www.w3.org/2000/svg";
 
