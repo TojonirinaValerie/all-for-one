@@ -45,7 +45,7 @@ export function ContactBlock() {
   const mutation = useMutation({
     mutationKey: ["contact"],
     mutationFn: async (values: z.infer<typeof formSchema>) =>
-      await axios.post("/contact/send", values),
+      await axios.post("/api/v1/email/send", values),
     onSuccess: () => {
       toast({
         title: "Message Sent Successfully",

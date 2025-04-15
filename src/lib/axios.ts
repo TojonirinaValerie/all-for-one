@@ -49,7 +49,7 @@ axiosWithCredential.interceptors.response.use(
             secure: true,
             sameSite: "Strict",
           });
-          cookies.set("toke", response.token, {
+          cookies.set("token", response.token, {
             secure: true,
             sameSite: "Strict",
           });
