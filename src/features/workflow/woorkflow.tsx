@@ -25,7 +25,7 @@ const workflowData: DataSectionType[] = [
     title: "Conception UI & Developpement",
     description:
       "Le traitement et le développement du projet englobent toutes les étapes allant de la conception détaillée des solutions techniques jusqu'à la réalisation des développements",
-    icon: <DraftingCompass color="#02385A" />
+    icon: <DraftingCompass color="#02385A" />,
   },
   {
     title: "Livraison et SAV",
@@ -43,8 +43,10 @@ const Workflow = () => {
 
   return (
     <Section className="lg:px-0 px-0 sm:px-0 md:px-0 max-md:pt-8">
-      <div className="bg-[#F5F7F9AA] my-[250px] w-full flex flex-row justify-center max-md:my-0 
-      max-md:bg-gradient-to-t max-md:from-[#F5F7F9] to-[#FFFFFF]">
+      <div
+        className="bg-[#F5F7F9AA] my-[250px] w-full flex flex-row justify-center max-md:my-0 
+      max-md:bg-gradient-to-t max-md:from-[#F5F7F9] to-[#FFFFFF]"
+      >
         <div
           className=" 2xl:px-0 lg:px-[100px] px-[20px] sm:px-[20px] md:px-[20px] h-[max-content] flex flex-row items-center 
           max-md:flex-col max-lg:mb-0 max-lg:pb-0 max-md:pt-0 w-full max-w-[1500px] max-md:pb-0 max-md:mb-0"
@@ -62,9 +64,9 @@ const Workflow = () => {
                 Notre flux de <SectionTitleAccent>travail</SectionTitleAccent> ?
               </SectionTitleTitle>
               <SectionTitleDescription align="left">
-                Lorem ipsum dolor a amet, consectetur adipiscing elit.
-                Vestibulum feugiat pretium velit ac scelerisque. In vitae ligula
-                eget ligula pulvinar rutrum convallis id.
+                Nous utilisons la méthode Agile Scrum pour accompagner nos
+                clients à chaque étape, garantissant une gestion fluide du
+                projet, de la conception à la livraison
               </SectionTitleDescription>
             </SectionTitle>
           </motion.div>

@@ -293,15 +293,15 @@ export default function TestimonialSection() {
                     <SectionTitleAccent>pense de nous</SectionTitleAccent>
                   </SectionTitleTitle>
                   <SectionTitleDescription align="left">
-                    Lorem ipsum dolor a amet, consectetur adipiscing elit.
-                    Vestibulum feugiat pretium velit ac scelerisque.
+                    Découvrez les témoignages de nos clients et comment notre
+                    expertise a joué un rôle clé dans leur réussite
                   </SectionTitleDescription>
                 </SectionTitle>
               </div>
               <div className="pb-6">
                 <Button
                   variant="outline"
-                  className="rounded-full border-gray-300 cursor-pointer text-base flex px-6 py-5 items-center font-[300] bg-[#00000000] hover:bg-primary hover:text-white"
+                  className="rounded-full border-gray-300 bg-transparent cursor-pointer text-base flex px-6 py-5 items-center font-[300]  hover:bg-primary hover:text-white"
                   color="#00000000"
                 >
                   Join our Community

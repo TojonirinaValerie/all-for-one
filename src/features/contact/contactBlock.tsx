@@ -5,7 +5,7 @@ import { ToastAction } from "@/components/ui/toast";
 import axios from "@/lib/axios";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import { MapPin, MessageCircle, Phone, Send } from "lucide-react";
+import { MessageCircle, Notebook, Phone, Send } from "lucide-react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Button } from "../../components/ui/button";
@@ -28,7 +28,7 @@ export function ContactBlock() {
       message: "Please enter a valid email address",
     }),
     phone: z.string().min(1, { message: "Phone number is required" }),
-    address: z.string().min(1, { message: "Address is required" }),
+    subject: z.string().min(1, { message: "Address is required" }),
     message: z.string().min(1, { message: "Message is required" }),
   });
 
@@ -37,7 +37,7 @@ export function ContactBlock() {
     defaultValues: {
       email: "",
       phone: "",
-      address: "",
+      subject: "",
       message: "",
     },
   });
@@ -89,7 +89,7 @@ export function ContactBlock() {
                       <Send className="absolute right-3 top-1/2 -translate-y-1/2 h-6 w-6 text-muted-foreground" />
                       <Input
                         placeholder="example@test.com"
-                        className="pr-10 py-6 rounded-2xl"
+                        className="pr-10 py-6 rounded-2xl placeholder:text-gray-300"
                         {...field}
                       />
                     </div>
@@ -105,14 +105,14 @@ export function ContactBlock() {
               render={({ field }) => (
                 <FormItem className="flex-1 min-w-[200px]">
                   <FormLabel className="text-sm font-medium text-muted-foreground mb-2">
-                    Phone
+                    Téléphone
                   </FormLabel>
                   <FormControl>
                     <div className="relative">
                       <Phone className="absolute right-3 top-1/2 -translate-y-1/2 h-6 w-6 text-muted-foreground" />
                       <Input
-                        placeholder="+261-0-0-0-000"
-                        className="pr-10 py-6 rounded-2xl"
+                        placeholder="+261 34 52 103 85"
+                        className="pr-10 py-6 rounded-2xl placeholder:text-gray-300"
                         {...field}
                       />
                     </div>
@@ -125,18 +125,18 @@ export function ContactBlock() {
 
           <FormField
             control={form.control}
-            name="address"
+            name="subject"
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="text-sm font-medium text-muted-foreground mb-2">
-                  Address
+                  Objet
                 </FormLabel>
                 <FormControl>
                   <div className="relative">
-                    <MapPin className="absolute right-3 top-1/2 -translate-y-1/2 h-6 w-6 text-muted-foreground" />
+                    <Notebook className="absolute right-3 top-1/2 -translate-y-1/2 h-6 w-6 text-muted-foreground" />
                     <Input
-                      placeholder="Antananarivo, Madagascar"
-                      className="pr-10 py-6 rounded-2xl"
+                      placeholder="Objet du mail"
+                      className="pr-10 py-6 rounded-2xl placeholder:text-gray-300"
                       {...field}
                     />
                   </div>
@@ -157,8 +157,8 @@ export function ContactBlock() {
                   <div className="relative">
                     <MessageCircle className="absolute right-3 top-6 -translate-y-1/2 h-6 w-6 text-muted-foreground" />
                     <Textarea
-                      placeholder="Write your message here..."
-                      className="h-full min-h-[120px] rounded-3xl pr-10 p-4 resize-none"
+                      placeholder="Écrivez votre message ici..."
+                      className="h-full min-h-[120px] rounded-3xl pr-10 p-4 resize-none placeholder:text-gray-300"
                       {...field}
                     />
                   </div>
@@ -173,7 +173,7 @@ export function ContactBlock() {
             className="h-14 w-full rounded-3xl"
             disabled={mutation.isPending}
           >
-            {mutation.isPending ? "Sending..." : "Send Message"}
+            {mutation.isPending ? "Envoye en cours..." : "Envoyer"}
           </Button>
         </form>
       </Form>

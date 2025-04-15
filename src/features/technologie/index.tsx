@@ -16,7 +16,7 @@ const fadeInVariants = {
 export default function TechnologiaSection() {
   return (
     <section
-      className="bg-[url(/assets/techno/bg-techno.webp)] w-full h-[100%] sm:h-auto md:h-auto bg-no-repeat bg-cover bg-fixed"
+      className="bg-[url(/assets/techno/bg-techno.webp)] w-full min-h-[calc(100vh-60px)] sm:h-auto md:min-h-[calc(100vh-60px)] bg-no-repeat bg-cover bg-fixed flex flex-row justify-center items-center"
       id="technologie"
     >
       <motion.div
@@ -50,8 +50,9 @@ export default function TechnologiaSection() {
                   variants={fadeInVariants}
                   custom={0.4}
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vestibulum feugiat pretium velit ac scelerisque.
+                  Les technologies que nous utilisons garantissent des
+                  plateformes performantes, évolutives et sécurisées, adaptées à
+                  vos besoins spécifiques et aux défis de demain
                 </motion.p>
               </div>
 

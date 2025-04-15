@@ -32,15 +32,13 @@ export function TextCenter() {
         DE VOS{" "}
       </span>
       <span className="text-accent 2xl:text-xxxl text-3xl font-bold">
-        PRODUITS DIGITAUX
+        SOLUTIONS NUMERIQUES
       </span>{" "}
       <br />
       <span className="font-light not-2xl:text-sm">
-        {`Nous vous donnons la technologie nécessaire pour améliorer la
-        productivité,`}
-        <br />{" "}
-        {`la sécurité, et l'excellence opérationnelle globale dans votre
-        projet.`}
+        Nous mettons en œuvre les technologies adaptées pour booster la
+        productivité, <br />
+        renforcer la sécurité et optimiser vos opérations quotidiennes.
       </span>
       <div className={STYLES.buttonContainer}>
         <button
@@ -51,11 +49,11 @@ export function TextCenter() {
         </button>
 
         <button
-          className={`${STYLES.buttonCommon} ${STYLES.quoteButton} cursor-pointer`}
+          className={`${STYLES.buttonCommon} ${STYLES.quoteButton} bg-transparent cursor-pointer`}
           aria-label="Obtenir un devis"
         >
           <span className="text-center">Obtenir un Devis</span>
-          <span className="w-0 opacity-0 group-hover:block group-hover:w-12 group-hover:opacity-100 transition-all duration-700 transform group-hover:translate-x-2 ease-in-out">
+          <span className="w-0 opacity-0 group-hover:block group-hover:w-12  group-hover:opacity-100 transition-all duration-700 hover:bg-transparent transform group-hover:translate-x-2 ease-in-out">
             <ArrowRight size={28} />
           </span>
         </button>

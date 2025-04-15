@@ -7,39 +7,54 @@ import SectionTitle, {
   SectionTitleEng,
   SectionTitleTitle,
 } from "@/components/section-title";
-import { ArrowRight } from "lucide-react";
+// import { ArrowRight } from "lucide-react";
 import ProjectsItem from "./projects-item";
 
 export type ProjectDataType = {
   title: string;
   description: string;
   image: string;
+  date: string;
+  type: string;
 };
 const ProjectsData: ProjectDataType[] = [
   {
-    title: "All Tracks",
-    description: "",
-    image: "/assets/project1.png",
+    title: "MadaDiaspora",
+    description:
+      "Un portail web pour le réseau de la Diaspora Malagasy afin de favoriser la collaboration, l'entraide et le partage d'expériences et d'opportunités entre les Malgaches dispersés à travers le monde.",
+    date: "2025",
+    type: "Portail web",
+    image: "/assets/diaspora.webp",
   },
   {
-    title: "All Tracks",
-    description: "",
+    title: "KayKeny",
+    description:
+      "Un site vitrine conçu pour KayKeny afin de présenter son entreprise, ses créations et son catalogue de vêtements pour renforcer sa présence en ligne",
+    type: "Site Vitrine",
+    date: "2024",
     image: "/assets/project2.png",
   },
   {
-    title: "All Tracks",
-    description: "",
-    image: "/assets/project3.png",
+    title: "GemManager",
+    description: "Une application web créée pour l'entreprise \"GemLab Consulting\" pour gérer ses activités et son processus de fonctionnement (clients, factures, certificats,etc.).",
+    date: "2024",
+    type: "Application web",
+    image: "/assets/glc.webp",
   },
   {
-    title: "All Tracks",
-    description: "",
-    image: "/assets/project4.png",
+    title: "AtariaTech",
+    description: "Un site e-commerce  développé pour \"Ataria Tech\" permettant la vente de matériel informatique. Il offre un catalogue dynamique et intuitive pour simplifier les achats des clients",
+    date: "2025",
+    type: "Site e-commerce",
+    image: "/assets/ataria.webp",
   },
 ];
 const Projects = () => {
   return (
-    <Section className="flex flex-col items-center text bg-primary/4 gap-6" id="projects">
+    <Section
+      className="flex flex-col items-center text bg-primary/4 gap-6"
+      id="projects"
+    >
       <div className="flex flex-col items-center w-full max-w-[1500px]">
         <SectionTitle>
           <SectionTitleEng>OUR PROJECT</SectionTitleEng>
@@ -47,9 +62,9 @@ const Projects = () => {
             Nos <SectionTitleAccent>Projets </SectionTitleAccent>
           </SectionTitleTitle>
           <SectionTitleDescription>
-            Lorem ipsum dolor a amet, consectetur adipiscing elit. Vestibulum
-            feugiat pretium velit ac scelerisque. In vitae ligula eget ligula
-            pulvinar rutrum convallis id.
+            Explorez nos projets réalisés, mettant en avant notre expertise,
+            créativité et capacité à transformer vos idées en solutions
+            concrètes et efficaces.
           </SectionTitleDescription>
         </SectionTitle>
         <div
@@ -63,7 +78,7 @@ const Projects = () => {
             <ProjectsItem key={`${index}-${item.title}`} data={item} />
           ))}
         </div>
-        {/* <button className="mt-6 border cursor-pointer border-primary hover:bg-[#dce4ef66] px-12 py-3 text-primary bg-[#dce4ef66] rounded-4xl not-2xl:h-12 not-lg:w-80 group relative flex items-center justify-center xl:mx-auto">
+        {/* <button className="mt-6 border bg-transparent cursor-pointer border-primary hover:bg-transparent px-12 py-3 text-primary  rounded-4xl not-2xl:h-12 not-lg:w-80 group relative flex items-center justify-center xl:mx-auto">
           <div className="text-center">Voir plus</div>
           <div className="w-0 opacity-0 group-hover:block group-hover:w-12 group-hover:opacity-100 transition-all duration-700 transform group-hover:translate-x-2 ease-in-out">
             <ArrowRight size={24} />
