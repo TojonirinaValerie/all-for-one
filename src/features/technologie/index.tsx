@@ -16,7 +16,7 @@ const fadeInVariants = {
 export default function TechnologiaSection() {
   return (
     <section
-      className="bg-[url(/assets/techno/bg-techno.webp)] w-full h-[80vh] sm:h-auto md:h-[calc(100vh-60px)] bg-no-repeat bg-cover bg-fixed flex flex-row justify-center items-center"
+      className="bg-[url(/assets/techno/bg-techno.webp)] w-full min-h-[calc(100vh-60px)] sm:h-auto md:min-h-[calc(100vh-60px)] bg-no-repeat bg-cover bg-fixed flex flex-row justify-center items-center"
       id="technologie"
     >
       <motion.div
